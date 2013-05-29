@@ -30,19 +30,16 @@
 			</header>
 		</div>
 	</div>
-
 	<div id="main">
 		<?php echo $yield; ?>
 	</div>
-
-	<footer class="container">
+	<div class="container">
 		<div class="row">
 			<div class="span12">
 				This is the footer.
 			</div>
 		</div>
-	</footer>
-      
+	</div>
 </div> <!--! end of #container -->
 
 <!-- Javascript at the bottom for fast page loading -->
