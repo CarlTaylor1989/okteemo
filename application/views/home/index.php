@@ -22,4 +22,9 @@
 			<a href="#" class="btn btn-warning">Button number 3</a>
 		</div>
 	</div>
+	<div class="row">
+		<div class="span12">
+			
+		</div>
+	</div>
 </div>
