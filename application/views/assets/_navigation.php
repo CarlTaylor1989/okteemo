@@ -6,26 +6,28 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</a>
+			<img src="assets/img/logo.png" class="logo">
 			<div class="nav-collapse">
 				<ul class="nav">
 					<li class="active"><a href="#">Home</a></li>
-					<li><a href="#link-1">Link</a></li>
-					<li><a href="#link-2">Link</a></li>
-					<li><a href="#link-3">Link</a></li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-						<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
-						 	<li><a tabindex="-1" href="#">Link</a></li>
-						 	<li><a tabindex="-1" href="#">Link</a></li>
-						 	<li><a tabindex="-1" href="#">Link</a></li>
-						 	<li class="divider"></li>
-						 	<li><a tabindex="-1" href="#">Link</a></li>
-						</ul>
-					</li>
+					<li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Find a... <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Player</a></li>
+                          <li><a href="#">Team</a></li>
+                        </ul>
+                      </li>
+					<li><a href="#link-3">About</a></li>
 				</ul>
-				<form class="navbar-form pull-right">
+				<form class="navbar-form pull-right span5">
   					<input type="text" class="span2" placeholder="E-mail address" />
   					<input type="password" class="span2" placeholder="Password" />
   					<button type="submit" class="btn">Login</button>
+  					<div class="forgot-password pull-left">
+  						<a href="">Forgot password?</a>
+  						<input type="checkbox" name="remember_me" id="remember_me" value="" />
+  						<label for="remember_me">Remember me</label>
+  					</div>
 				</form>
 			</div><!-- /.nav-collapse -->
 		</div>
