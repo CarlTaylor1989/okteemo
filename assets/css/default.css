@@ -3,7 +3,7 @@ body {
 	padding: 50px 0 0 0;
 }
 
-/* Navigation CSS */
+/* NAVIGATION CSS */
 .navbar-inner {
 	background: #434343; /* Old browsers */
 	background: -moz-linear-gradient(top,  #434343 0%, #434343 65%, #303030 100%); /* FF3.6+ */
@@ -15,7 +15,7 @@ body {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#434343', endColorstr='#303030',GradientType=0 ); /* IE6-9 */
 }
 .navbar .nav > li > a {
-	color: #F7F7F9;
+	color: #999999;
 	text-shadow: 0 1px 0 #555555;
 }
 .navbar .nav > li > a:hover {
@@ -24,4 +24,9 @@ body {
 .navbar .nav > li.active > a {
 	color: #555555;
 	text-shadow: 0 1px 0 #FFFFFF;
+}
+
+/* FOOTER CSS */
+#footer {
+	margin-top: 10px;
 }

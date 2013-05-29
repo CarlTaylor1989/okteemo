@@ -23,7 +23,7 @@
 					</li>
 				</ul>
 				<form class="navbar-form pull-right">
-  					<input type="text" class="span2" placeholder="E-mail Address" />
+  					<input type="text" class="span2" placeholder="E-mail address" />
   					<input type="password" class="span2" placeholder="Password" />
   					<button type="submit" class="btn">Login</button>
 				</form>

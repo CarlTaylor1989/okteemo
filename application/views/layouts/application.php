@@ -33,7 +33,7 @@
 	<div id="main">
 		<?php echo $yield; ?>
 	</div>
-	<div class="container">
+	<div id="footer" class="container">
 		<div class="row">
 			<div class="span12">
 				This is the footer.
