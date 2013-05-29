@@ -1,0 +1,26 @@
+body {
+	background-color: #F7F7F9;
+}
+
+/* Navigation CSS */
+.navbar-inner {
+	background: #434343; /* Old browsers */
+	background: -moz-linear-gradient(top,  #434343 0%, #434343 65%, #303030 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#434343), color-stop(65%,#434343), color-stop(100%,#303030)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #434343 0%,#434343 65%,#303030 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #434343 0%,#434343 65%,#303030 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #434343 0%,#434343 65%,#303030 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #434343 0%,#434343 65%,#303030 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#434343', endColorstr='#303030',GradientType=0 ); /* IE6-9 */
+}
+.navbar .nav > li > a {
+	color: #F7F7F9;
+	text-shadow: 0 1px 0 #555555;
+}
+.navbar .nav > li > a:hover {
+	color: #FFFFFF;
+}
+.navbar .nav > li.active > a {
+	color: #555555;
+	text-shadow: 0 1px 0 #FFFFFF;
+}

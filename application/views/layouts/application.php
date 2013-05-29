@@ -17,6 +17,7 @@
 <link rel="shortcut icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="assets/css/bootstrap.css">
+<link rel="stylesheet" href="assets/css/default.css">
 </head>
 
 <body>
@@ -25,7 +26,7 @@
 	<div class="container">
 		<div class="row">
 			<header class="span12">
-				<?php //$this->load->view('assets/_navigation'); ?>
+				<?php $this->load->view('assets/_navigation'); ?>
 			</header>
 		</div>
 	</div>
@@ -37,7 +38,7 @@
 	<footer class="container">
 		<div class="row">
 			<div class="span12">
-				FOOTER!!!
+				This is the footer.
 			</div>
 		</div>
 	</footer>
@@ -45,6 +46,7 @@
 </div> <!--! end of #container -->
 
 <!-- Javascript at the bottom for fast page loading -->
+<script src="assets/js/jquery-1.10.0.min.js"></script>
 <script src="assets/js/bootstrap.js"></script>
 <script src="assets/js/libs/modernizr-2.5.3.js"></script>
 </body>
