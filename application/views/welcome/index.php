@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row">
 		<div class="span12">
-			This is the welcome index!
+			<h1>OK Teemo</h1>
 		</div>
 	</div>
 </div>

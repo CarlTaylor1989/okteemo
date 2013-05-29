@@ -16,10 +16,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="/favicon.ico">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
-<link rel="stylesheet" href="assets/less/bootstrap.css">
-<script src="assets/js/libs/modernizr-2.5.3.js"></script>
-
+<link rel="stylesheet" href="assets/css/bootstrap.css">
 </head>
 
 <body>
@@ -33,11 +30,9 @@
 		</div>
 	</div>
 
-
 	<div id="main">
 		<?= $yield; ?>
 	</div>
-
 
 	<footer class="container">
 		<div class="row">
@@ -49,8 +44,8 @@
       
 </div> <!--! end of #container -->
 
-
 <!-- Javascript at the bottom for fast page loading -->
-
+<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/libs/modernizr-2.5.3.js"></script>
 </body>
 </html>
