@@ -11,10 +11,7 @@
 				<ul class="nav">
 					<li class="active"><a href="#">Home</a></li>
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-						Find
-						<b class="caret"></b>
-						</a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Find <b class="caret"></b></a>
 						<ul class="dropdown-menu">
 							<li><a href="#">Summoner</a></li>
 							<li><a href="#">Teams</a></li>
@@ -25,16 +22,16 @@
 					<li><a href="#">About</a></li>
 					<li><a href="#">Contact</a></li>
 				</ul>
-				<ul class="nav pull-right">
+				<ul class="nav pull-right sign-in">
 		        	<li class="dropdown">
-		            	<a class="dropdown-toggle" href="#" data-toggle="dropdown" style="color:#363636;">Sign In<strong class="caret"></strong></a>
-			            <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+		            	<a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign in <b class="caret"></b></a>
+			            <div class="dropdown-menu">
 				            <form action="submit" method="post">
-								<input id="user_username" style="margin-bottom: 15px;" type="text" name="user[username]" placeholder="Username" size="30" />
-								<input id="user_password" style="margin-bottom: 15px;" type="password" name="user[password]" placeholder="Password" size="30" />
-								<input id="user_remember_me" style="float: left; margin-right: 10px;" type="checkbox" name="user[remember_me]" value="1" />
-								<label style="color:#000;" for="user_remember_me">Remember me</label>								
-								<input class="btn btn-primary" style="clear: left; width: 100%; height: 32px; font-size: 13px;" type="submit" name="commit" value="Sign In" />
+								<input id="user_username" type="text" name="user[username]" placeholder="Username" size="30" />
+								<input id="user_password" type="password" name="user[password]" placeholder="Password" size="30" />
+								<input id="user_remember_me" type="checkbox" name="user[remember_me]" value="1" />
+								<label for="user_remember_me">Remember me</label>								
+								<input class="btn btn-danger" type="submit" name="commit" value="Sign In" />
 							</form>
 			            </div>
 		        	</li>

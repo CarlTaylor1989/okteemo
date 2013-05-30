@@ -4,7 +4,7 @@ class Home extends MY_Controller {
 
 	public function index()
 	{	
-		$this->data['title'] = 'OkTeemo';
+		$this->data['title'] = 'OKteemo';
 		$this->data['body']	= 'home';
 	}
 }
