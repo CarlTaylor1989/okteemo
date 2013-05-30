@@ -10,9 +10,20 @@
 			<div class="nav-collapse">
 				<ul class="nav">
 					<li class="active"><a href="#">Home</a></li>
-					<li><a href="#">Teams</a></li>
-					<li><a href="#">Tournoments</a></li>
-					<li><a href="#link-3">About</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						Find
+						<b class="caret"></b>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Summoner</a></li>
+							<li><a href="#">Teams</a></li>
+							<li><a href="#">Tournoments</a></li>
+							<li><a href="#">Etc</a></li>
+						</ul>
+					</li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
 				</ul>
 				<ul class="nav pull-right">
 		        	<li class="dropdown">
