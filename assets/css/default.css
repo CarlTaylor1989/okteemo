@@ -1,8 +1,31 @@
 body {
 	background-color: #1E1E1E;
 	color: #D9D9D9;
-	padding: 70px 0 0 0;
+	padding: 90px 0 0 0;
 	font-family: arial, sans-serif;
+}
+
+/* CONTENT CSS */
+
+#home h4 {
+	text-align: center;
+	line-height: 32px;
+}
+#home h4 span {
+	font-size: 40px;
+	color: #F9F9F9;
+}
+.text-center {
+	text-align: center;
+}
+.control-group label {
+	color: #1E1E1E;
+}
+.well h3 {
+	color: #1E1E1E;
+	text-shadow: 0 1px 0 #FFFFFF;
+	margin: 0;
+	padding: 0;
 }
 
 /* NAVIGATION CSS */
@@ -57,5 +80,17 @@ body {
 
 /* FOOTER CSS */
 #footer {
-	margin-top: 10px;
+	background: url(/assets/img/footer-bar.png) top left repeat-x;
+	width: 940px;
+	margin-top: 20px;
+	padding-top: 20px;
+}
+#footer ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+#footer ul li {
+	float: left;
+	margin: 0 10px 0 0;
 }

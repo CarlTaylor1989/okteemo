@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="assets/css/default.css">
 </head>
 
-<body>
+<body id="<?php echo $body; ?>">
 
 <div id="container">
 	<div class="container">
@@ -36,7 +36,12 @@
 	<div id="footer" class="container">
 		<div class="row">
 			<div class="span12">
-				This is the footer.
+				<ul>
+					<li><a href="">Home</a></li>
+					<li><a href="">Find a team</a></li>
+					<li><a href="">Find a player</a></li>
+					<li><a href="">About OkTeemo</a></li>
+				</ul>
 			</div>
 		</div>
 	</div>
