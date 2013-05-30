@@ -10,25 +10,24 @@
 			<div class="nav-collapse">
 				<ul class="nav">
 					<li class="active"><a href="#">Home</a></li>
-					<li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Find a... <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                          <li><a href="#">Player</a></li>
-                          <li><a href="#">Team</a></li>
-                        </ul>
-                      </li>
+					<li><a href="#">Teams</a></li>
+					<li><a href="#">Tournoments</a></li>
 					<li><a href="#link-3">About</a></li>
 				</ul>
-				<form class="navbar-form pull-right span5">
-  					<input type="text" class="span2" placeholder="E-mail address" />
-  					<input type="password" class="span2" placeholder="Password" />
-  					<button type="submit" class="btn">Login</button>
-  					<div class="forgot-password pull-left">
-  						<a href="">Forgot password?</a>
-  						<input type="checkbox" name="remember_me" id="remember_me" value="" />
-  						<label for="remember_me">Remember me</label>
-  					</div>
-				</form>
+				<ul class="nav pull-right">
+		        	<li class="dropdown">
+		            	<a class="dropdown-toggle" href="#" data-toggle="dropdown" style="color:#363636;">Sign In<strong class="caret"></strong></a>
+			            <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+				            <form action="submit" method="post">
+								<input id="user_username" style="margin-bottom: 15px;" type="text" name="user[username]" placeholder="Username" size="30" />
+								<input id="user_password" style="margin-bottom: 15px;" type="password" name="user[password]" placeholder="Password" size="30" />
+								<input id="user_remember_me" style="float: left; margin-right: 10px;" type="checkbox" name="user[remember_me]" value="1" />
+								<label style="color:#000;" for="user_remember_me">Remember me</label>								
+								<input class="btn btn-primary" style="clear: left; width: 100%; height: 32px; font-size: 13px;" type="submit" name="commit" value="Sign In" />
+							</form>
+			            </div>
+		        	</li>
+				</ul>
 			</div><!-- /.nav-collapse -->
 		</div>
 	</div><!-- /navbar-inner -->

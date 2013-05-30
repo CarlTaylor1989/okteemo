@@ -46,10 +46,10 @@ body {
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
 }
 .nav li {
-	line-height: 45px;
+	line-height: 25px;
 }
 .navbar .nav .dropdown-toggle .caret {
-	margin-top: 20px;
+	margin-top: 12px;
 }
 .navbar .nav > li > a {
 	color: #999999;
@@ -77,8 +77,7 @@ body {
 }
 .logo {
 	float: left;
-	margin-right: 18px;
-	margin-top: 8px;
+	margin-top: 11px;
 }
 
 /* FOOTER CSS */
