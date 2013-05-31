@@ -56,7 +56,7 @@
 				<h4>I'm looking for a<br /><span>TEAM</span></h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				<div class="text-center">
-					<a href="#" class="btn btn-large btn-danger">Button number 1</a>
+					<a href="#" class="btn btn-green-custom">Button number 1</a>
 				</div>
 			</div>
 		</div>
@@ -65,7 +65,7 @@
 				<h4>I'm looking for a<br /><span>TEAM</span></h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				<div class="text-center">
-					<a href="#" class="btn btn-large btn-danger">Button number 1</a>
+					<a href="#" class="btn btn-green-custom">Button number 1</a>
 				</div>
 			</div>
 		</div>
@@ -74,9 +74,14 @@
 				<h4>I'm looking for a<br /><span>TEAM</span></h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 				<div class="text-center">
-					<a href="#" class="btn btn-large btn-danger">Button number 1</a>
+					<a href="#" class="btn btn-green-custom">Button number 1</a>
 				</div>
 			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="span12">
+			<h2>Hear what our members have to say!</h2>
 		</div>
 	</div>
 	<div class="row">

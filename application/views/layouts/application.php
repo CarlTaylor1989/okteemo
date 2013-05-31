@@ -51,5 +51,12 @@
 <script src="assets/js/jquery-1.10.0.min.js"></script>
 <script src="assets/js/bootstrap.js"></script>
 <script src="assets/js/libs/modernizr-2.5.3.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('.carousel').carousel({
+		interval: 6000
+	});
+});
+</script>
 </body>
 </html>

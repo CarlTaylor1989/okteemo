@@ -3,6 +3,22 @@ body {
 	color: #D9D9D9;
 	font-family: arial, sans-serif;
 }
+.btn-green-custom {
+	background-color: hsl(120, 47%, 29%) !important;
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3fb03f", endColorstr="#276c27");
+	background-image: -khtml-gradient(linear, left top, left bottom, from(#3fb03f), to(#276c27));
+	background-image: -moz-linear-gradient(top, #3fb03f, #276c27);
+	background-image: -ms-linear-gradient(top, #3fb03f, #276c27);
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3fb03f), color-stop(100%, #276c27));
+	background-image: -webkit-linear-gradient(top, #3fb03f, #276c27);
+	background-image: -o-linear-gradient(top, #3fb03f, #276c27);
+	background-image: linear-gradient(#3fb03f, #276c27);
+	border-color: #276c27 #276c27 hsl(120, 47%, 24.5%);
+	color: #fff !important;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.29);
+	-webkit-font-smoothing: antialiased;
+}
 
 /* CONTENT CSS */
 
@@ -22,6 +38,7 @@ body {
 #home h4 {
 	text-align: center;
 	line-height: 32px;
+	margin: 20px 0 10px 0;
 }
 #home h4 span {
 	font-size: 40px;
@@ -97,6 +114,7 @@ ul.sign-in input[type="submit"] {
 }
 #myCarousel .feedback-comment {
 	font-style: italic;
+	color: #bfbfbf;
 }
 
 /* NAVIGATION CSS */
@@ -153,6 +171,7 @@ ul.sign-in input[type="submit"] {
 	background: url(../img/footer-bar.png) top left repeat-x;
 	width: 940px;
 	margin-top: 20px;
+	margin-bottom: 20px;
 	padding-top: 20px;
 }
 #footer ul {
