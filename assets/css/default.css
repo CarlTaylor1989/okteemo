@@ -8,7 +8,7 @@ body {
 
 .bg {
 	padding: 60px 0 0 0;
-	background: url(/assets/img/bg.jpg) top left no-repeat;
+	background: url(../img/bg.jpg) top left no-repeat;
 	width: 100%;
 	float: left;
 	-webkit-box-shadow: inset 0px -5px 20px -2px rgba(30, 30, 30, 1);
@@ -29,6 +29,9 @@ body {
 }
 .text-center {
 	text-align: center;
+}
+.col-3 {
+	margin-bottom: 20px;
 }
 ul.sign-in .dropdown-toggle {
 	color: #363636;
@@ -75,6 +78,25 @@ ul.sign-in input[type="submit"] {
 }
 .reg_form input {
 	width: 220px;
+}
+.carousel-indicators {
+	right: 50%;
+	top: 100%;
+}
+#myCarousel {
+	background: url(../img/footer-bar.png) top left repeat-x;
+	padding-top: 20px;
+}
+#myCarousel .no-marg {
+	margin-left: 0px;
+}
+#myCarousel .feedback-author {
+	font-style: italic;
+	font-size: 16px;
+	font-weight: bold;
+}
+#myCarousel .feedback-comment {
+	font-style: italic;
 }
 
 /* NAVIGATION CSS */
@@ -128,7 +150,7 @@ ul.sign-in input[type="submit"] {
 
 /* FOOTER CSS */
 #footer {
-	background: url(/assets/img/footer-bar.png) top left repeat-x;
+	background: url(../img/footer-bar.png) top left repeat-x;
 	width: 940px;
 	margin-top: 20px;
 	padding-top: 20px;
