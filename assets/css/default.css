@@ -21,7 +21,6 @@ body {
 }
 
 /* CONTENT CSS */
-
 .bg {
 	padding: 60px 0 0 0;
 	background: url(../img/bg.jpg) top left no-repeat;
@@ -29,11 +28,6 @@ body {
 	float: left;
 	-webkit-box-shadow: inset 0px -5px 20px -2px rgba(30, 30, 30, 1);
 	box-shadow: inset 0px -5px 20px -2px rgba(30, 30, 30, 1);
-}
-.well.main-desc {
-	background-color: rgba(30, 30, 30, 1);
-	border-color: #000000;
-	zoom: 1;
 }
 #home h4 {
 	text-align: center;
@@ -73,29 +67,7 @@ ul.sign-in input[type="submit"] {
 	height: 32px;
 	font-size: 13px;
 }
-.reg_form .well {
-	padding-bottom: 0px;
-}
-.reg_form .well .control-group {
-	margin: 0px;
-}
-.reg_form .well .control-group label {
-	color: #1E1E1E;
-}
-.reg_form .well .control-group input[type="submit"] {
-	width: 100%;
-}
-.reg_form .well h3 {
-	color: #1E1E1E;
-	font-size: 23px;
-	text-shadow: 2px 2px 0 #FFFFFF;
-	margin: 10px 0 20px 0;
-	padding: 0;
-	line-height: 0px;
-}
-.reg_form input {
-	width: 220px;
-}
+
 .carousel-indicators {
 	right: 50%;
 	top: 100%;
@@ -119,6 +91,56 @@ ul.sign-in input[type="submit"] {
 .feedback-feature h2 {
 	font-size: 24px;
 }
+
+
+/* Step 1, 2, 3 well */
+.well {
+	height:400px;
+	text-align: center;
+	color: #999;
+	zoom:1;
+	padding-top:0;
+}
+.well .span4{
+	margin-left:0;
+}
+
+.well p{
+	text-align: left;
+	padding:0 10px;
+}
+
+.well h3{
+	color:#3b3b3b;
+	margin-bottom:0;
+}
+
+.reg_form .well {
+	padding-bottom: 0px;
+}
+.reg_form .well .control-group {
+	margin: 0px;
+}
+.reg_form .well .control-group label {
+	color: #1E1E1E;
+}
+.reg_form .well .control-group input[type="submit"] {
+	width: 100%;
+}
+
+.reg_form input {
+	width: 220px;
+}
+
+/*placeholder image*/
+.imgplaceholder{
+	background: url(../img/placeholder.png);
+	height:290px;
+	width:280px;
+}
+
+
+
 
 /* NAVIGATION CSS */
 .navbar-inner {

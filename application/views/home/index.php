@@ -1,17 +1,15 @@
 <div class="bg">
 	<div class="container">
 		<div class="row">
-			<div class="span8">
-				<div class="well main-desc">
-					<h1>OKteemo <small>Get yours teams here.</small></h1>
-					<p>Info here talking about what this site offers etc.</p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-				</div>
-			</div>
-			<div class="span4 reg_form">
-				<div class="well">
-					<h3>Register for free!</h3>
-					<form>
+			<div class="well">
+
+				<!-- Step 1 -->
+				<div class="span4">
+					<h3>Step 1</h3>
+					<p class="text-info">
+						Enter your details...
+					</p>
+					<form>							
 						<div class="control-group">
 							<label class="control-label" for="reg_username">Username</label>
 							<div class="controls">
@@ -41,10 +39,32 @@
 						      		<input class="span3" id="reg_conf_password" name="reg_conf_password" type="text" placeholder="Confirm Password" />
 						    	</div>
 						  	</div>
-						  	<input type="submit" class="btn btn-large btn-danger" value="Let's get started!" />
+						  	<input type="submit" class="btn btn-large btn-primary" value="Next >" />
 						</div>
 					</form>
+				</div>		
+
+				<!-- Step 2 -->
+				<div class="span4">
+					<h3>Step 2</h3>
+					<p class="text-info">
+						Select your role(s), skill level and what you're looking for.
+					</p>
+
+					<div class="imgplaceholder"></div>
+					
 				</div>
+
+				<!-- Step 3 -->
+				<div class="span4">
+					<h3>Step 3</h3>
+					<p class="text-info">
+						Look at all your matches for teams, duo partners scimmage friends.
+					</p>
+					
+					<div class="imgplaceholder"></div>
+				</div>
+
 			</div>
 		</div>
 	</div>
@@ -114,7 +134,7 @@
 			    		<p class="feedback-author">CarlTaylor1989 - EUW</p>
 			    	</div>
 			    	<div class="span4">
-			    		<p class="feedback-comment">"Found a 5v5 within 20 minutes and managed to achieve platinum! Thank you Okteemo."</p>
+			    		<p class="feedback-comment">"I love it up the chuff"</p>
 			    		<p class="feedback-author">IRazorX - US</p>
 			    	</div>
 			    	<div class="span4">
