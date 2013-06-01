@@ -40,18 +40,15 @@
 						    	</div>
 						  	</div>
 						  	<div class="center">
-						  		<input type="submit" class="btn btn-large btn-primary" value="Next >" />
+						  		<button class="btn btn-large btn-primary">Next <i class="icon-arrow-right"></i></a>
 						  	</div>
 						</div>
-					</form>
 				</div>		
 
 				<!-- Step 2 -->
 				<div class="span4">
 					<h3>Step 2</h3>
-					<p class="text-info">
-						Select your role(s), skill level and what you're looking for.
-					</p>
+					<p class="text-info">Select your role(s), skill level and what you're looking for.</p>
 
 					<div class="imgplaceholder"></div>
 					
@@ -60,11 +57,10 @@
 				<!-- Step 3 -->
 				<div class="span4">
 					<h3>Step 3</h3>
-					<p class="text-info">
-						Look at all your matches for teams, duo partners scimmage friends.
-					</p>
+					<p class="text-info">Look at all your matches for teams, duo partners scimmage friends.</p>
 					
 					<div class="imgplaceholder"></div>
+					</form>
 				</div>
 				<div class="clear"></div>
 			</div>
