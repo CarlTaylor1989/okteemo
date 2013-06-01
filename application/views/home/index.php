@@ -11,34 +11,34 @@
 			<div class="span4 reg_form">
 				<div class="well">
 					<h3>Register for free!</h3>
-					<form>
+					<form id="home_reg_form">
 						<div class="control-group">
 							<label class="control-label" for="reg_username">Username</label>
 							<div class="controls">
 						    	<div class="input-prepend">
 						      		<span class="add-on"><i class="icon-user"></i></span>
-						      		<input class="span3" id="reg_username" name="reg_username" type="text" placeholder="Username" />
+						      		<input class="span3 validate[required]" id="reg_username" name="reg_username" type="text" placeholder="Username" />
 						    	</div>
 						  	</div>
 							<label class="control-label" for="reg_email">Email address</label>
 							<div class="controls">
 						    	<div class="input-prepend">
 						      		<span class="add-on"><i class="icon-envelope"></i></span>
-						      		<input class="span3" id="reg_email" name="reg_email" type="text" placeholder="Email address" />
+						      		<input class="span3 validate[required,custom[email]]" id="reg_email" name="reg_email" type="text" placeholder="Email address" />
 						    	</div>
 						  	</div>
 						  	<label class="control-label" for="reg_password">Password</label>
 							<div class="controls">
 						    	<div class="input-prepend">
 						      		<span class="add-on"><i class="icon-lock"></i></span>
-						      		<input class="span3" id="reg_password" name="reg_password" type="text" placeholder="Password" />
+						      		<input class="span3 validate[required]" id="reg_password" name="reg_password" type="password" placeholder="Password" />
 						    	</div>
 						  	</div>
 						  	<label class="control-label" for="reg_conf_password">Confirm Password</label>
 							<div class="controls">
 						    	<div class="input-prepend">
 						      		<span class="add-on"><i class="icon-lock"></i></span>
-						      		<input class="span3" id="reg_conf_password" name="reg_conf_password" type="text" placeholder="Confirm Password" />
+						      		<input class="span3 validate[required,equals[reg_password]]" id="reg_conf_password" name="reg_conf_password" type="password" placeholder="Confirm Password" />
 						    	</div>
 						  	</div>
 						  	<input type="submit" class="btn btn-large btn-danger" value="Let's get started!" />
