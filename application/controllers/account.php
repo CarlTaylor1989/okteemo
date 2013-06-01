@@ -4,7 +4,7 @@ class Account extends MY_Controller {
 
 	public function index()
 	{	
-		$this->load->database();
+		//$this->load->database();
 		$this->data['title'] = 'Account';
 		$this->data['body']	= 'account';
 	}

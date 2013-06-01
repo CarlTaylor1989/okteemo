@@ -4,7 +4,7 @@ class Home extends MY_Controller {
 
 	public function index()
 	{	
-		$this->load->database();
+		//$this->load->database();
 		$this->load->library('form_validation');
 
 		$this->data['title'] = 'Home';
