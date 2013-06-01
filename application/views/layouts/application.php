@@ -17,6 +17,7 @@
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <link rel="stylesheet" href="assets/css/bootstrap.css" />
+<link rel="stylesheet" href="assets/css/bootstrap.icon-large.min.css">
 <link rel="stylesheet" href="assets/css/validationEngine.jquery.css" />
 <link rel="stylesheet" href="assets/css/bootstrap-select.css" />
 <link rel="stylesheet" href="assets/css/default.css" />

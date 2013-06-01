@@ -9,27 +9,27 @@
 					<p class="text-info">
 						Enter your details...<br /><br />
 					</p>
-					<form>							
+					<form id="home_reg_form">							
 						<div class="control-group">
 							<label class="control-label" for="reg_username">Username</label>
 							<div class="controls">
 						    	<div class="input-prepend">
 						      		<span class="add-on"><i class="icon-user"></i></span>
-						      		<input class="span3" id="reg_username" name="reg_username" type="text" placeholder="Username" />
+						      		<input class="span3 validate[required]" id="reg_username" name="reg_username" type="text" placeholder="Username" />
 						    	</div>
 						  	</div>
 							<label class="control-label" for="reg_email">Email address</label>
 							<div class="controls">
 						    	<div class="input-prepend">
 						      		<span class="add-on"><i class="icon-envelope"></i></span>
-						      		<input class="span3" id="reg_email" name="reg_email" type="text" placeholder="Email address" />
+						      		<input class="span3 validate[required,custom[email]]" id="reg_email" name="reg_email" type="text" placeholder="Email address" />
 						    	</div>
 						  	</div>
 						  	<label class="control-label" for="reg_password">Password</label>
 							<div class="controls">
 						    	<div class="input-prepend">
 						      		<span class="add-on"><i class="icon-lock"></i></span>
-						      		<input class="span3" id="reg_password" name="reg_password" type="text" placeholder="Password" />
+						      		<input class="span3 validate[required]" id="reg_password" name="reg_password" type="text" placeholder="Password" />
 						    	</div>
 						  	</div>
 						  	<label class="control-label" for="reg_conf_password">Confirm Password</label>
@@ -49,20 +49,18 @@
 				<div class="span4">
 					<h3>Step 2</h3>
 					<p class="text-info">Select your role(s), skill level and what you're looking for.</p>
-
 					<div class="control-group">
-						<label class="control-label" for="reg_username">Role</label>
+						<label class="control-label" for="reg_role">Role</label>
 							<div class="controls">
 						    	<div class="input-prepend">
 						      		<span class="add-on"><i class="icon-eye-open"></i></span>
-						      		<select class="reg_select selectpicker" multiple>
+						      		<select name="reg_role" id="reg_role" class="reg_select selectpicker" multiple>
 						      			<option value="">Please select...</option>
-						      			<option value="Top" data-icon="icon-chevron-up">Top</option>
+						      			<option value="Top" data-icon="icon-wrench">Top</option>
 						      			<option value="Middle" data-icon="icon-fire">Mid</option>
-						      			<option value="Bot" data-icon="icon-chevron-down">Bot</option>
 						      			<option value="Jungle" data-icon="icon-leaf">Jungle</option>
 						      			<option value="AD" data-icon="icon-screenshot">AD</option>
-						      			<option value="Support" data-icon="icon-plus">Support</option>
+						      			<option value="Support" data-icon="icon-heart">Support</option>
 						      		</select>
 						    	</div>
 						  	</div>
