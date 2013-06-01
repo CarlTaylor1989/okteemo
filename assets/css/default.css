@@ -116,6 +116,9 @@ ul.sign-in input[type="submit"] {
 	font-style: italic;
 	color: #bfbfbf;
 }
+.feedback-feature h2 {
+	font-size: 24px;
+}
 
 /* NAVIGATION CSS */
 .navbar-inner {

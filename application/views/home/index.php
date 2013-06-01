@@ -79,7 +79,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="row">
+	<div class="row feedback-feature">
 		<div class="span12">
 			<h2>Hear what our members have to say!</h2>
 		</div>
