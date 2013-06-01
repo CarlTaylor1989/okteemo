@@ -1,6 +1,6 @@
 <div class="bg">
 	<div class="container">
-		<div class="row">
+		<div class="row-fluid">
 			<div class="well">
 
 				<!-- Step 1 -->
@@ -39,7 +39,9 @@
 						      		<input class="span3" id="reg_conf_password" name="reg_conf_password" type="text" placeholder="Confirm Password" />
 						    	</div>
 						  	</div>
-						  	<input type="submit" class="btn btn-large btn-primary" value="Next >" />
+						  	<div class="center">
+						  		<input type="submit" class="btn btn-large btn-primary" value="Next >" />
+						  	</div>
 						</div>
 					</form>
 				</div>		
@@ -64,7 +66,7 @@
 					
 					<div class="imgplaceholder"></div>
 				</div>
-
+				<div class="clear"></div>
 			</div>
 		</div>
 	</div>

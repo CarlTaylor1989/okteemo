@@ -19,6 +19,12 @@ body {
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.29);
 	-webkit-font-smoothing: antialiased;
 }
+.clear {
+	clear: both;
+}
+.center {
+	text-align: center;
+}
 
 /* CONTENT CSS */
 .bg {
@@ -96,24 +102,22 @@ ul.sign-in input[type="submit"] {
 
 /* Step 1, 2, 3 well */
 .well {
-	height:400px;
-	text-align: center;
 	color: #999;
 	zoom:1;
 	padding-top:0;
 }
-.well .span4{
-	margin-left:0;
-}
 
 .well p{
 	text-align: left;
-	padding:0 10px;
 }
 
 .well h3{
+	text-align: center;
 	color:#3b3b3b;
 	margin-bottom:0;
+}
+.well input[type="text"], .well input[type="password"] {
+	width: 260px;
 }
 
 .reg_form .well {
