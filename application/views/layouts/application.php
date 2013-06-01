@@ -14,10 +14,11 @@
 <meta name="description" content="">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" href="/favicon.ico">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="stylesheet" href="assets/css/bootstrap.css">
-<link rel="stylesheet" href="assets/css/default.css">
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="stylesheet" href="assets/css/bootstrap.css" />
+<link rel="stylesheet" href="assets/css/validationEngine.jquery.css" />
+<link rel="stylesheet" href="assets/css/default.css" />
 </head>
 
 <body id="<?php echo $body; ?>">
@@ -51,8 +52,14 @@
 <script src="assets/js/jquery-1.10.0.min.js"></script>
 <script src="assets/js/bootstrap.js"></script>
 <script src="assets/js/libs/modernizr-2.5.3.js"></script>
+<script src="assets/js/languages/jquery.validationEngine-en.js"></script>
+<script src="assets/js/jquery.validationEngine.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
+	$("#home_reg_form").validationEngine({
+		scroll: false
+	});
+
 	$('.carousel').carousel({
 		interval: 6000
 	});
