@@ -133,8 +133,12 @@ ul.sign-in input[type="submit"] {
 	width: 100%;
 }
 
-.reg_form input {
+.reg_form input, .reg_select select {
 	width: 220px;
+}
+.bootstrap-select {
+	width: 260px !important;
+	margin: 0px !important;
 }
 
 /*placeholder image*/

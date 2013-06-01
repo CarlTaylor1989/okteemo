@@ -18,6 +18,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <link rel="stylesheet" href="assets/css/bootstrap.css" />
 <link rel="stylesheet" href="assets/css/validationEngine.jquery.css" />
+<link rel="stylesheet" href="assets/css/bootstrap-select.css" />
 <link rel="stylesheet" href="assets/css/default.css" />
 </head>
 
@@ -54,12 +55,13 @@
 <script src="assets/js/libs/modernizr-2.5.3.js"></script>
 <script src="assets/js/languages/jquery.validationEngine-en.js"></script>
 <script src="assets/js/jquery.validationEngine.js"></script>
+<script src="assets/js/bootstrap-select.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
 	$("#home_reg_form").validationEngine({
 		scroll: false
 	});
-
+	$('.selectpicker').selectpicker();
 	$('.carousel').carousel({
 		interval: 6000
 	});

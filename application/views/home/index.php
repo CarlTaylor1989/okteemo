@@ -7,7 +7,7 @@
 				<div class="span4">
 					<h3>Step 1</h3>
 					<p class="text-info">
-						Enter your details...
+						Enter your details...<br /><br />
 					</p>
 					<form>							
 						<div class="control-group">
@@ -40,7 +40,7 @@
 						    	</div>
 						  	</div>
 						  	<div class="center">
-						  		<button class="btn btn-large btn-primary">Next <i class="icon-arrow-right"></i></a>
+						  		<button class="btn btn-large btn-primary">Next <i class="icon-arrow-right icon-white"></i></a>
 						  	</div>
 						</div>
 				</div>		
@@ -50,8 +50,23 @@
 					<h3>Step 2</h3>
 					<p class="text-info">Select your role(s), skill level and what you're looking for.</p>
 
-					<div class="imgplaceholder"></div>
-					
+					<div class="control-group">
+						<label class="control-label" for="reg_username">Role</label>
+							<div class="controls">
+						    	<div class="input-prepend">
+						      		<span class="add-on"><i class="icon-eye-open"></i></span>
+						      		<select class="reg_select selectpicker" multiple>
+						      			<option value="">Please select...</option>
+						      			<option value="Top" data-icon="icon-chevron-up">Top</option>
+						      			<option value="Middle" data-icon="icon-fire">Mid</option>
+						      			<option value="Bot" data-icon="icon-chevron-down">Bot</option>
+						      			<option value="Jungle" data-icon="icon-leaf">Jungle</option>
+						      			<option value="AD" data-icon="icon-screenshot">AD</option>
+						      			<option value="Support" data-icon="icon-plus">Support</option>
+						      		</select>
+						    	</div>
+						  	</div>
+						</div>
 				</div>
 
 				<!-- Step 3 -->
