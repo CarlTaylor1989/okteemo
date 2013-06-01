@@ -23,6 +23,8 @@ body {
 /* CONTENT CSS */
 .bg {
 	padding: 60px 0 0 0;
+}
+#home .bg {
 	background: url(../img/bg.jpg) top left no-repeat;
 	width: 100%;
 	float: left;
