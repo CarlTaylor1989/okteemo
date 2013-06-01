@@ -9,7 +9,7 @@
 <head>
 <meta charset="utf-8">
 
-<title><?php echo $title; ?></title>
+<title>OKteemo | <?php echo $title; ?></title>
 <meta name="author" content="OkTeemo">
 <meta name="description" content="">
 
