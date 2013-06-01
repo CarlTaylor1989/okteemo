@@ -4,8 +4,20 @@ class Home extends MY_Controller {
 
 	public function index()
 	{	
-		$this->data['title'] = 'OKteemo';
+		//$this->load->database();
+		$this->load->library('form_validation');
+
+		$this->data['title'] = 'Home';
 		$this->data['body']	= 'home';
+
+		if ($this->form_validation->run() == FALSE)
+		{
+			// Do not redirect
+		}
+		else
+		{
+			$this->load->view('formsuccess');
+		}
 	}
 }
 

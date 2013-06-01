@@ -18,7 +18,7 @@
  * NOTE: If you change these, also change the error_reporting() code below
  *
  */
-	$environment = 'production';
+	$environment = 'development';
 
 	if (function_exists('apache_getenv') && apache_getenv("ENVIRONMENT")) {
 	  $environment = apache_getenv("ENVIRONMENT");
