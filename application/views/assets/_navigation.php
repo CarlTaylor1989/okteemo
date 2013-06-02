@@ -17,10 +17,10 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</a>
-			<img src="<?php echo base_url(); ?>assets/img/logo.png" class="logo">
+			<a href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>assets/img/logo.png" class="logo" border="0" /></a>
 			<div class="nav-collapse">
 				<ul class="nav">
-					<li class="active"><a href="#">Home</a></li>
+					<li class="active"><a href="<?php echo base_url(); ?>">Home</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Find <b class="caret"></b></a>
 						<ul class="dropdown-menu">
