@@ -6,7 +6,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</a>
-			<img src="assets/img/logo.png" class="logo">
+			<img src="<?php echo base_url(); ?>assets/img/logo.png" class="logo">
 			<div class="nav-collapse">
 				<ul class="nav">
 					<li class="active"><a href="#">Home</a></li>

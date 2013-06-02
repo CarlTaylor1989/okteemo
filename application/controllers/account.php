@@ -8,6 +8,12 @@ class Account extends MY_Controller {
 		$this->data['title'] = 'Account';
 		$this->data['body']	= 'account';
 	}
+
+	public function create_profile()
+	{
+		$this->data['title'] = 'Create your profile';
+		$this->data['body']	= 'account';
+	}
 }
 
 /* End of file account.php */

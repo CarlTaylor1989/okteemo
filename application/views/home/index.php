@@ -2,13 +2,10 @@
 	<div class="container content">
 		<div class="row-fluid">
 			<div class="well">
-
 				<!-- Step 1 -->
 				<div class="span4">
 					<h3>Step 1</h3>
-					<p class="text-info">
-						Enter your details...<br /><br />
-					</p>
+					<p class="text-info">Enter your details...<br /><br /></p>
 					<form id="home_reg_form">							
 						<div class="control-group">
 							<label class="control-label" for="reg_username">Username</label>
@@ -44,7 +41,6 @@
 						  	</div>
 						</div>
 				</div>		
-
 				<!-- Step 2 -->
 				<div class="span4">
 					<h3>Step 2</h3>
@@ -66,12 +62,10 @@
 						  	</div>
 						</div>
 				</div>
-
 				<!-- Step 3 -->
 				<div class="span4">
 					<h3>Step 3</h3>
 					<p class="text-info">Look at all your matches for teams, duo partners scimmage friends.</p>
-					
 					<div class="imgplaceholder"></div>
 					</form>
 				</div>
