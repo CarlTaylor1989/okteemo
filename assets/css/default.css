@@ -104,7 +104,10 @@ ul.sign-in input[type="submit"] {
 .well {
 	color: #999;
 	zoom:1;
-	padding-top:0;
+}
+
+.content{
+	margin-top:30px;
 }
 
 .well p{
