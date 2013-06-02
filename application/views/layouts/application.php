@@ -59,9 +59,9 @@
 <script src="<?php echo base_url(); ?>assets/js/bootstrap-select.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-	$("#home_reg_form").validationEngine({
-		scroll: false
-	});
+	// $("#home_reg_form").validationEngine({
+	// 	scroll: false
+	// });
 	$('.selectpicker').selectpicker();
 	$('.carousel').carousel({
 		interval: 6000

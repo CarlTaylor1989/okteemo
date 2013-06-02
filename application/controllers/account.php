@@ -11,6 +11,7 @@ class Account extends MY_Controller {
 
 	public function create_profile()
 	{
+		$this->load->database();
 		$this->data['title'] = 'Create your profile';
 		$this->data['body']	= 'account';
 	}
