@@ -15,6 +15,12 @@ class Account extends MY_Controller {
 		$this->data['title'] = 'Create your profile';
 		$this->data['body']	= 'account';
 	}
+
+	public function logout()
+	{	
+		$this->session->sess_destroy();
+        redirect('home');
+	}
 }
 
 /* End of file account.php */

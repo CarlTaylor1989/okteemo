@@ -40,6 +40,7 @@
 
 $route['default_controller'] = "home";
 $route['account/create-profile'] = "account/create_profile";
+$route['logout'] = "account/logout";
 $route['404_override'] = '';
 
 

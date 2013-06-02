@@ -49,5 +49,12 @@ class Registration extends MY_Model {
     	$this->date_created  = time();
 
     	$this->db->insert('users', $this);
+
+    	$data = array(
+	        'username' 		=> $this->username,
+	        'email'			=> $this->email_address,
+	        'is_logged_in' 	=> true      
+        );
+    	$this->session->set_userdata($data);
     }
 }

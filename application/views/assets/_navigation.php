@@ -1,3 +1,14 @@
+<div id="logoutModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  	<div class="modal-header">
+    	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    	<h3 id="myModalLabel">Are you sure you want to logout?</h3>
+  	</div>
+  	<div class="modal-footer">
+    	<a href="<?php echo base_url(); ?>logout" class="btn btn-primary">Yes</a>
+    	<a class="btn" data-dismiss="modal" aria-hidden="true">Cancel</a>
+  	</div>
+</div>
+
 <div class="navbar navbar-fixed-top">
 	<div class="navbar-inner">
 		<div class="container">
@@ -22,6 +33,18 @@
 					<li><a href="#">About</a></li>
 					<li><a href="#">Contact</a></li>
 				</ul>
+				<?php if($this->session->userdata('is_logged_in') == true) { ?>
+				<ul class="nav pull-right">
+		        	<li class="dropdown">
+		            	<a class="dropdown-toggle" href="#" data-toggle="dropdown">Welcome, <strong><?php echo $this->session->userdata('username'); ?></strong>! <b class="caret"></b></a>
+			            <ul class="dropdown-menu">
+							<li><a href="#">My account</a></li>
+							<li><a href="#">Edit my profile</a></li>
+							<li><a href="#logoutModal" data-toggle="modal">Log out</a></li>
+						</ul>
+		        	</li>
+				</ul>
+				<?php } else { ?>
 				<ul class="nav pull-right sign-in">
 		        	<li class="dropdown">
 		            	<a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign in <b class="caret"></b></a>
@@ -36,6 +59,7 @@
 			            </div>
 		        	</li>
 				</ul>
+				<?php } ?>
 			</div><!-- /.nav-collapse -->
 		</div>
 	</div><!-- /navbar-inner -->

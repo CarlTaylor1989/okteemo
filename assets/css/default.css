@@ -101,6 +101,9 @@ ul.sign-in input[type="submit"] {
 .form_errors {
 	color: red;
 }
+h3#myModalLabel {
+	color: #1E1E1E;
+}
 
 /* Step 1, 2, 3 well */
 .well {
