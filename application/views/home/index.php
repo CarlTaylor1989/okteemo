@@ -1,15 +1,4 @@
 <div class="bg">
-	<div class="container">
-		<div class="well">
-			<p>what to put here??</p>
-		</div>
-	</div>
-	
-</div>
-
-<div style="clear:both;" ></div>
-
-<div class="container">
 	<div class="container content">
 		<div class="row-fluid">
 			<div class="well">
@@ -90,7 +79,8 @@
 			</div>
 		</div>
 	</div>
-
+</div>
+<div class="container">
 	<div class="row col-3">
 		<div class="span4">
 			<div class="looking-team">
