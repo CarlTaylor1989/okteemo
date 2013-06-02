@@ -29,14 +29,14 @@
 							<div class="controls">
 						    	<div class="input-prepend">
 						      		<span class="add-on"><i class="icon-lock"></i></span>
-						      		<input class="span3 validate[required]" id="reg_password" name="reg_password" type="text" placeholder="Password" />
+						      		<input class="span3 validate[required]" id="reg_password" name="reg_password" type="password" placeholder="Password" />
 						    	</div>
 						  	</div>
 						  	<label class="control-label" for="reg_conf_password">Confirm Password</label>
 							<div class="controls">
 						    	<div class="input-prepend">
 						      		<span class="add-on"><i class="icon-lock"></i></span>
-						      		<input class="span3" id="reg_conf_password" name="reg_conf_password" type="text" placeholder="Confirm Password" />
+						      		<input class="span3" id="reg_conf_password" name="reg_conf_password" type="password" placeholder="Confirm Password" />
 						    	</div>
 						  	</div>
 						  	<div class="center">
