@@ -46,7 +46,7 @@ class Registration extends MY_Model {
     	$this->username 	 = $this->input->post('reg_username');
     	$this->email_address = $this->input->post('reg_email');
     	$this->password 	 = $this->encrypt->encode($this->input->post('reg_password'));
-    	$this->date_created  = time();
+    	$this->date_created  = date('Y-m-d H:i:s');
 
     	$this->db->insert('users', $this);
 

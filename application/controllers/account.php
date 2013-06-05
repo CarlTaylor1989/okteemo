@@ -13,7 +13,7 @@ class Account extends MY_Controller {
 	{
 		$this->load->database();
 		$this->data['title'] = 'Create your profile';
-		$this->data['body']	= 'account';
+		$this->data['body']	= 'account-profile';
 	}
 
 	public function logout()

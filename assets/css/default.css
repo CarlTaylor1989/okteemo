@@ -106,7 +106,15 @@ ul.sign-in input[type="submit"] {
 h3#myModalLabel {
 	color: #1E1E1E;
 }
-
+.well.intro-space {
+	background-color: rgba(0, 0, 0, 0.5);
+	border-color: rgba(0, 0, 0, 0.5);
+}
+.well.intro-space h2 {
+	color: #3FB03F;
+	text-shadow: 1px 1px 1px #000000;
+    filter: dropshadow(color=#000000, offx=1, offy=1);
+}
 /* Step 1, 2, 3 well */
 .bg .well {
 	padding-top: 0px;
@@ -149,6 +157,13 @@ h3#myModalLabel {
 .bootstrap-select {
 	width: 260px !important;
 	margin: 0px !important;
+}
+.nav-tabs.nav-stacked.nav-profile > li > a {
+	border: none;
+	background-color: #2d2d2d;
+}
+#account-profile h2 {
+	margin-top: 0px;
 }
 
 /*placeholder image*/

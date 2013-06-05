@@ -2,8 +2,10 @@
 	<div class="container content">
 		<div class="row">
 			<div class="span8">
-				<div class="well">
-					Test
+				<div class="well intro-space">
+					<div class="load-fade">
+						<h2>Find your teams here at OkTeemo.</h2>
+					</div>
 				</div>
 			</div>
 			<div class="pull-right span4">
