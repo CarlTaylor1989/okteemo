@@ -48,10 +48,10 @@
 $active_group = 'default';
 $active_record = TRUE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
-$db['default']['password'] = 'root';
-$db['default']['database'] = 'orm-test';
+$db['default']['hostname'] = '10.168.1.56';
+$db['default']['username'] = 'okteemoc_user';
+$db['default']['password'] = 'lolpassword';
+$db['default']['database'] = 'okteemoc_db';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
