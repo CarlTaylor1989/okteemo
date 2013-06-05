@@ -31,11 +31,13 @@ body {
 	padding: 60px 0 0 0;
 }
 #home .bg {
-	background: url(../img/bg2.png) top left repeat-x;
+	background: url(../img/bg3.jpg) top left no-repeat;
 	width: 100%;
 	float: left;
 	-webkit-box-shadow: inset 0px -5px 20px -2px rgba(30, 30, 30, 1);
 	box-shadow: inset 0px -5px 20px -2px rgba(30, 30, 30, 1);
+	margin-top: 50px;
+	padding-top: 20px;
 }
 #home h4 {
 	text-align: center;
@@ -106,6 +108,10 @@ h3#myModalLabel {
 }
 
 /* Step 1, 2, 3 well */
+.bg .well {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
 .well {
 	color: #999;
 	zoom:1;
@@ -121,7 +127,7 @@ h3#myModalLabel {
 	margin-bottom:0;
 }
 .well input[type="text"], .well input[type="password"] {
-	width: 260px;
+	width: 210px;
 }
 
 .reg_form .well {

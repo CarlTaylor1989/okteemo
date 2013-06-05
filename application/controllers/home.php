@@ -15,7 +15,7 @@ class Home extends MY_Controller {
 		$this->data['body']	= 'home';
 
 		$this->form_validation->set_rules('reg_username', 'Username', 'required|callback_username_check');
-		$this->form_validation->set_rules('reg_email', 'Email', 'required|callback_email_check');
+		$this->form_validation->set_rules('reg_email', 'Email', 'required|valid_email|callback_email_check');
 		$this->form_validation->set_rules('reg_password', 'Password', 'required|matches[reg_conf_password]');
 		$this->form_validation->set_rules('reg_conf_password', 'Password Confirmation', 'required');
 
@@ -26,7 +26,7 @@ class Home extends MY_Controller {
 		else
 		{
 			$this->registration->insert_entry();
-			redirect('account/create-profile');
+			redirect('account/edit-profile');
 		}
 	}
 

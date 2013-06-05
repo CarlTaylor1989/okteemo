@@ -1,11 +1,15 @@
 <div class="bg">
 	<div class="container content">
-		<div class="row-fluid">
-			<div class="well">
+		<div class="row">
+			<div class="span8">
+				<div class="well">
+					Test
+				</div>
+			</div>
+			<div class="pull-right span4">
 				<!-- Step 1 -->
-				<div class="span4">
-					<h3>Step 1</h3>
-					<p class="text-info">Enter your details...<br /><br /></p>
+				<div class="well">
+					<h3>Register for free now!</h3>
 					<div class="form_errors">
 						<?php echo validation_errors(); ?>
 					</div>
@@ -40,11 +44,11 @@
 						    	</div>
 						  	</div>
 						  	<div class="center">
-						  		<button class="btn btn-large btn-primary">Next <i class="icon-arrow-right icon-white"></i></a>
+						  		<button class="btn btn-large btn-primary">Go! <i class="icon-arrow-right icon-white"></i></a>
 						  	</div>
 						</div>
 				</div>		
-				<!-- Step 2 -->
+				<!-- Step 2
 				<div class="span4">
 					<h3>Step 2</h3>
 					<p class="text-info">Select your role(s), skill level and what you're looking for.</p>
@@ -64,14 +68,9 @@
 						    	</div>
 						  	</div>
 						</div>
-				</div>
+				</div> -->
 				<!-- Step 3 -->
-				<div class="span4">
-					<h3>Step 3</h3>
-					<p class="text-info">Look at all your matches for teams, duo partners scimmage friends.</p>
-					<div class="imgplaceholder"></div>
-					</form>
-				</div>
+				</form>
 				<div class="clear"></div>
 			</div>
 			<div class="clear"></div>

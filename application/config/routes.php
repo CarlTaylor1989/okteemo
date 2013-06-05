@@ -39,7 +39,7 @@
 */
 
 $route['default_controller'] = "home";
-$route['account/create-profile'] = "account/create_profile";
+$route['account/edit-profile'] = "account/edit_profile";
 $route['logout'] = "account/logout";
 $route['404_override'] = '';
 
