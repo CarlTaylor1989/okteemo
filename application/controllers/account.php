@@ -9,7 +9,7 @@ class Account extends MY_Controller {
 		$this->data['body']	= 'account';
 	}
 
-	public function create_profile()
+	public function edit_profile()
 	{
 		$this->load->database();
 		$this->data['title'] = 'Create your profile';
