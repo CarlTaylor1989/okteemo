@@ -16,6 +16,7 @@
 						<?php echo validation_errors(); ?>
 					</div>
 					<?php echo form_open('/', $form_id); ?>
+						<input name="register_form" type="hidden" value="true" />
 						<div class="control-group">
 							<label class="control-label" for="reg_username">Username</label>
 							<div class="controls">

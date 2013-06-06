@@ -50,7 +50,8 @@
 		            	<a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign in <b class="caret"></b></a>
 			            <div class="dropdown-menu">
 				            <form action="<?php echo base_url(); ?>" method="post">
-								<input id="login_username" type="text" name="login_username" placeholder="Username" size="30" />
+				            	<input name="login_form" type="hidden" value="true" />
+								<input id="login_email" type="text" name="login_email" placeholder="Email address" size="30" />
 								<input id="login_password" type="password" name="login_password" placeholder="Password" size="30" />
 								<input id="login_remember" type="checkbox" name="login_remember" value="0" />
 								<label for="login_remember">Remember me</label>								

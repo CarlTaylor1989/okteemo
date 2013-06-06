@@ -50,6 +50,6 @@ class Registration extends MY_Model {
         $salt        = $this->ion_auth_model->salt();
 
         $this->ion_auth_model->register($username, $password, $email, $additional_data, $group_ids);
-        $this->ion_auth->login($email, $password, $remember);
+        $this->ion_auth_model->login($email, $password, $remember);
     }
 }

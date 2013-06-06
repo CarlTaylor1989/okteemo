@@ -14,19 +14,40 @@ class Home extends MY_Controller {
 		$this->data['title'] = 'Home';
 		$this->data['body']	= 'home';
 
-		$this->form_validation->set_rules('reg_username', 'Username', 'required|callback_username_check');
-		$this->form_validation->set_rules('reg_email', 'Email', 'required|valid_email|callback_email_check');
-		$this->form_validation->set_rules('reg_password', 'Password', 'required|matches[reg_conf_password]');
-		$this->form_validation->set_rules('reg_conf_password', 'Password Confirmation', 'required');
+		if($this->input->post('register_form') == true)
+		{
+			$this->form_validation->set_rules('reg_username', 'Username', 'required|callback_username_check');
+			$this->form_validation->set_rules('reg_email', 'Email', 'required|valid_email|callback_email_check');
+			$this->form_validation->set_rules('reg_password', 'Password', 'required|matches[reg_conf_password]');
+			$this->form_validation->set_rules('reg_conf_password', 'Password Confirmation', 'required');
 
-		if ($this->form_validation->run() == FALSE)
-		{
-			// Do not redirect
+			if ($this->form_validation->run() == FALSE)
+			{
+				// Do not redirect
+			}
+			else
+			{
+				$this->registration->insert_entry();
+				redirect('account/edit-profile');
+			}
 		}
-		else
+		else if($this->input->post('login_form') == true)
 		{
-			$this->registration->insert_entry();
-			redirect('account/edit-profile');
+			$email       = $this->input->post('login_email');
+	    	$password 	 = $this->ion_auth->hash_password($this->input->post('login_password'));
+	    	$remember	 = $this->input->post('login_remember');
+	    	echo '<br /><br /><br /><br />email: '.$email.'<br />password: '.$password.'<br />remember: '.$remember;
+
+	    	if(isset($remember))
+	    	{
+	    		$remember = true;
+	    	}
+	    	else
+	    	{
+	    		$remember = false;
+	    	}
+
+			$this->ion_auth->login($email, $password, $remember);
 		}
 	}
 

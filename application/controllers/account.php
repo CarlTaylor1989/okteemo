@@ -25,8 +25,7 @@ class Account extends MY_Controller {
     	$email       = $this->input->post('login_email');
     	$password 	 = $this->input->post('login_password');
     	$remember	 = $this->input->post('login_remember');
-    	echo $email;
-    	exit();
+
     	if(isset($remember))
     	{
     		$remember = true;
