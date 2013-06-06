@@ -11,15 +11,39 @@ class Account extends MY_Controller {
 
 	public function edit_profile()
 	{
+		if (!$this->ion_auth->logged_in())
+		{
+      		redirect('/', 'refresh');
+    	}
 		$this->load->database();
-		$this->data['title'] = 'Create your profile';
+		$this->data['title'] = 'Edit your profile';
 		$this->data['body']	= 'account-profile';
+	}
+
+	public function login()
+	{
+    	$email       = $this->input->post('login_email');
+    	$password 	 = $this->input->post('login_password');
+    	$remember	 = $this->input->post('login_remember');
+    	echo $email;
+    	exit();
+    	if(isset($remember))
+    	{
+    		$remember = true;
+    	}
+    	else
+    	{
+    		$remember = false;
+    	}
+
+		$this->ion_auth->login($email, $password, $remember);
+        redirect('/');
 	}
 
 	public function logout()
 	{	
-		$this->session->sess_destroy();
-        redirect('home');
+		$this->ion_auth->logout();
+        redirect('/');
 	}
 }
 

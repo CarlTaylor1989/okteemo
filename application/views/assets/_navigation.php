@@ -33,7 +33,7 @@
 					<li><a href="#">About</a></li>
 					<li><a href="#">Contact</a></li>
 				</ul>
-				<?php if($this->session->userdata('is_logged_in') == true) { ?>
+				<?php if($this->ion_auth->logged_in()) { ?>
 				<ul class="nav pull-right">
 		        	<li class="dropdown">
 		            	<a class="dropdown-toggle" href="#" data-toggle="dropdown">Welcome, <strong><?php echo $this->session->userdata('username'); ?></strong>! <b class="caret"></b></a>
@@ -49,11 +49,11 @@
 		        	<li class="dropdown">
 		            	<a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign in <b class="caret"></b></a>
 			            <div class="dropdown-menu">
-				            <form action="submit" method="post">
-								<input id="user_username" type="text" name="user[username]" placeholder="Username" size="30" />
-								<input id="user_password" type="password" name="user[password]" placeholder="Password" size="30" />
-								<input id="user_remember_me" type="checkbox" name="user[remember_me]" value="1" />
-								<label for="user_remember_me">Remember me</label>								
+				            <form action="<?php echo base_url(); ?>" method="post">
+								<input id="login_username" type="text" name="login_username" placeholder="Username" size="30" />
+								<input id="login_password" type="password" name="login_password" placeholder="Password" size="30" />
+								<input id="login_remember" type="checkbox" name="login_remember" value="0" />
+								<label for="login_remember">Remember me</label>								
 								<input class="btn btn-danger" type="submit" name="commit" value="Sign In" />
 							</form>
 			            </div>

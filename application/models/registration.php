@@ -26,7 +26,7 @@ class Registration extends MY_Model {
     function email_available($email)
     {
     	$query = $this->db->get_where('users', array(
-    		'email_address' => $this->input->post('reg_email')
+    		'email' => $this->input->post('reg_email')
     	));
 
     	if($query->num_rows() > 0)
@@ -43,18 +43,13 @@ class Registration extends MY_Model {
     {
     	$this->load->library('encrypt');
 
-    	$this->username 	 = $this->input->post('reg_username');
-    	$this->email_address = $this->input->post('reg_email');
-    	$this->password 	 = $this->encrypt->encode($this->input->post('reg_password'));
-    	$this->date_created  = date('Y-m-d H:i:s');
+    	$username 	 = $this->input->post('reg_username');
+    	$email       = $this->input->post('reg_email');
+    	$password 	 = $this->encrypt->encode($this->input->post('reg_password'));
+    	$created_on  = date('Y-m-d H:i:s');
+        $salt        = $this->ion_auth_model->salt();
 
-    	$this->db->insert('users', $this);
-
-    	$data = array(
-	        'username' 		=> $this->username,
-	        'email'			=> $this->email_address,
-	        'is_logged_in' 	=> true      
-        );
-    	$this->session->set_userdata($data);
+        $this->ion_auth_model->register($username, $password, $email, $additional_data, $group_ids);
+        $this->ion_auth->login($email, $password, $remember);
     }
 }
