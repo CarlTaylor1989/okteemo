@@ -50,29 +50,7 @@
 						  		<button class="btn btn-large btn-primary">Go! <i class="icon-arrow-right icon-white"></i></a>
 						  	</div>
 						</div>
-				</div>		
-				<!-- Step 2
-				<div class="span4">
-					<h3>Step 2</h3>
-					<p class="text-info">Select your role(s), skill level and what you're looking for.</p>
-					<div class="control-group">
-						<label class="control-label" for="reg_role">Role</label>
-							<div class="controls">
-						    	<div class="input-prepend">
-						      		<span class="add-on"><i class="icon-eye-open"></i></span>
-						      		<select name="reg_role" id="reg_role" class="reg_select selectpicker" multiple>
-						      			<option value="">Please select...</option>
-						      			<option value="Top" data-icon="icon-wrench">Top</option>
-						      			<option value="Middle" data-icon="icon-fire">Mid</option>
-						      			<option value="Jungle" data-icon="icon-leaf">Jungle</option>
-						      			<option value="AD" data-icon="icon-screenshot">AD</option>
-						      			<option value="Support" data-icon="icon-heart">Support</option>
-						      		</select>
-						    	</div>
-						  	</div>
-						</div>
-				</div> -->
-				<!-- Step 3 -->
+				</div>
 				</form>
 				<div class="clear"></div>
 			</div>

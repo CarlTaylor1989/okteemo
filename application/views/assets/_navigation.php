@@ -26,7 +26,7 @@
 						<ul class="dropdown-menu">
 							<li><a href="#">Summoner</a></li>
 							<li><a href="#">Teams</a></li>
-							<li><a href="#">Tournoments</a></li>
+							<li><a href="#">Tournaments</a></li>
 							<li><a href="#">Etc</a></li>
 						</ul>
 					</li>

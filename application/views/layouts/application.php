@@ -61,6 +61,7 @@
 $(document).ready(function(){
 	$('.load-fade').css('display', 'none');
 	$('.load-fade').fadeIn(900);
+	$('#progress_tip').tooltip();
 	$('.selectpicker').selectpicker();
 	$('.carousel').carousel({
 		interval: 6000

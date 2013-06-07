@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 3.3.9.2
+-- version 3.5.1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 02, 2013 at 10:42 PM
--- Server version: 5.5.9
--- PHP Version: 5.3.6
+-- Generation Time: Jun 07, 2013 at 03:27 PM
+-- Server version: 5.5.24-log
+-- PHP Version: 5.3.1
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -22,24 +23,93 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `groups`
+--
+
+CREATE TABLE IF NOT EXISTS `groups` (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) NOT NULL,
+  `description` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `groups`
+--
+
+INSERT INTO `groups` (`id`, `name`, `description`) VALUES
+(1, 'admin', 'Administrator'),
+(2, 'members', 'General User');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
-CREATE TABLE `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(255) NOT NULL,
-  `email_address` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `date_created` datetime NOT NULL,
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `ip_address` varbinary(16) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(80) NOT NULL,
+  `salt` varchar(40) DEFAULT NULL,
+  `email` varchar(100) NOT NULL,
+  `activation_code` varchar(40) DEFAULT NULL,
+  `forgotten_password_code` varchar(40) DEFAULT NULL,
+  `forgotten_password_time` int(11) unsigned DEFAULT NULL,
+  `remember_code` varchar(40) DEFAULT NULL,
+  `created_on` datetime NOT NULL,
+  `last_login` datetime DEFAULT NULL,
+  `active` tinyint(1) unsigned DEFAULT NULL,
+  `first_name` varchar(50) DEFAULT NULL,
+  `last_name` varchar(50) DEFAULT NULL,
+  `company` varchar(100) DEFAULT NULL,
+  `phone` varchar(20) DEFAULT NULL,
+  `profile_complete` tinyint(4) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` VALUES(1, 'CarlTaylor1989', 'carltaylor1989@gmail.com', 'wildangel123', '0000-00-00 00:00:00');
-INSERT INTO `users` VALUES(2, 'CarlTaylor1989', 'carltaylor1989@gmail.com', '8L5IldfuWEKatgc7ajvQX/sP7nMR8IWbd8vxybrzyo2eoJ/0VvBpyMqwCZGLmNKOjwr2KiYWO7JSo0Zd/hzFSQ==', '0000-00-00 00:00:00');
-INSERT INTO `users` VALUES(3, 'Test', 'test@test.com', 'G66koePLFNNgzQUJH6jdc/sJhA+kz8dk4LCRBht3L6xSAxuQA9D3mq3oq3ljmAPt5OAZ3hpPfV4LI4LUSMxKZA==', '0000-00-00 00:00:00');
-INSERT INTO `users` VALUES(4, 'test1', 'test1@test.com', 'cRku+26OnHSHHiRY8evkVF1T2AinYvIfhx7Q9GZ7+6fw20xHoFIazkP1YUjkNeksGXjgyZL180xd4opFJpzztw==', '0000-00-00 00:00:00');
-INSERT INTO `users` VALUES(5, 'test2', 'test2@test.com', 'BZ2Yqo6wYExM4q4+cOarleK6WT2niJQq4B2PVB09/42vFPYm2stVawy3k0fQ6MvVAKZhFQmRUmEw+MCGADdxyw==', '0000-00-00 00:00:00');
+INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`, `profile_complete`) VALUES
+(3, '\0\0', 'test', '51448e5df9fee0919a22323e0672434d5b0d9d7a', '92d3ecff7e', 'test@test.com', NULL, NULL, NULL, 'd099f384421cbbaa6483a7f2b7bf633620f3e9f2', '2013-06-07 10:31:19', '2013-06-07 10:56:49', 1, NULL, NULL, NULL, NULL, 4);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users_groups`
+--
+
+CREATE TABLE IF NOT EXISTS `users_groups` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) unsigned NOT NULL,
+  `group_id` mediumint(8) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uc_users_groups` (`user_id`,`group_id`),
+  KEY `fk_users_groups_users1_idx` (`user_id`),
+  KEY `fk_users_groups_groups1_idx` (`group_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `users_groups`
+--
+
+INSERT INTO `users_groups` (`id`, `user_id`, `group_id`) VALUES
+(3, 3, 2);
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `users_groups`
+--
+ALTER TABLE `users_groups`
+  ADD CONSTRAINT `fk_users_groups_groups1` FOREIGN KEY (`group_id`) REFERENCES `groups` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_users_groups_users1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

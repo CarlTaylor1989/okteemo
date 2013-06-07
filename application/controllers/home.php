@@ -28,15 +28,14 @@ class Home extends MY_Controller {
 			else
 			{
 				$this->registration->insert_entry();
-				redirect('account/edit-profile');
+				redirect('account/edit-profile/1');
 			}
 		}
 		else if($this->input->post('login_form') == true)
 		{
-			$email       = $this->input->post('login_email');
-	    	$password 	 = $this->ion_auth->hash_password($this->input->post('login_password'));
+			$identity    = $this->input->post('login_email');
+	    	$password 	 = $this->input->post('login_password');
 	    	$remember	 = $this->input->post('login_remember');
-	    	echo '<br /><br /><br /><br />email: '.$email.'<br />password: '.$password.'<br />remember: '.$remember;
 
 	    	if(isset($remember))
 	    	{
@@ -47,7 +46,7 @@ class Home extends MY_Controller {
 	    		$remember = false;
 	    	}
 
-			$this->ion_auth->login($email, $password, $remember);
+			$this->ion_auth_model->login($identity, $password, $remember);
 		}
 	}
 

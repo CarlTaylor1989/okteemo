@@ -1,4 +1,4 @@
-<?php 
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Registration extends MY_Model {
 
@@ -41,13 +41,10 @@ class Registration extends MY_Model {
 
     function insert_entry()
     {
-    	$this->load->library('encrypt');
-
     	$username 	 = $this->input->post('reg_username');
     	$email       = $this->input->post('reg_email');
-    	$password 	 = $this->encrypt->encode($this->input->post('reg_password'));
+    	$password 	 = $this->input->post('reg_password');
     	$created_on  = date('Y-m-d H:i:s');
-        $salt        = $this->ion_auth_model->salt();
 
         $this->ion_auth_model->register($username, $password, $email, $additional_data, $group_ids);
         $this->ion_auth_model->login($email, $password, $remember);
