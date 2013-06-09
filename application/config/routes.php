@@ -40,7 +40,7 @@
 
 $route['default_controller'] = "home";
 $route['account/edit-profile'] = "account/edit_profile";
-$route['account/edit-profile/(:num)'] = "account/edit_profile/$1";
+$route['account/edit-profile/(:any)'] = "account/edit_profile/$1";
 $route['logout'] = "account/logout";
 $route['404_override'] = '';
 

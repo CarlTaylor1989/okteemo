@@ -8,31 +8,45 @@ class Account extends MY_Controller {
 		$this->data['body']	= 'account';
 	}
 
-	public function edit_profile()
+	public function edit_profile($stage_view = 1)
 	{
-		// is user logged in? if not, redirect them to index
-		if (!$this->ion_auth->logged_in())
+		if(!$this->ion_auth->logged_in())
 		{
       		redirect('/', 'refresh');
     	}
 
-    	// load profile details
     	$this->load->model('profile');
     	$this->data = array(
     		'title' 			=> 'Edit your profile',
     		'body'				=> 'account-profile',
-    		'profile_complete' 	=> $this->profile->check_profile_complete()
+    		'username'			=> $this->profile->username(),
+    		'profile_complete' 	=> $this->profile->check_profile_complete(),
+    		'stage_view'		=> 'account/profile_complete/stage_'.$this->profile->check_profile_complete()
     	);
 
-    	if($this->data['profile_complete'] == 4)
+    	$stage_view = $this->data['profile_complete'];
+    	$username = $this->data['username'];
+
+    	if($stage_view == 1)
     	{
-    		$this->data['profile_complete'] = 'complete';
+    		$this->view = 'account/profile_complete/stage_1';
+    	}
+    	else if($stage_view == 2)
+    	{
+    		$this->view = 'account/profile_complete/stage_2';
+    	}
+    	else if($stage_view == 3)
+    	{
+    		$this->view = 'account/profile_complete/stage_3';
+    	}
+    	else if($stage_view == 4)
+    	{
+    		$stage_view = $this->profile->username();
     	}
 
-    	// checks to see if profile is on the correct stage
-    	if($this->uri->segment(3) != $this->data['profile_complete'])
+    	if($this->uri->segment(3) != $stage_view)
     	{
-    		redirect('/account/edit-profile/'.$this->data['profile_complete'], 'refresh');
+    		redirect('/account/edit-profile/'.$stage_view, 'refresh');
     	}
 	}
 

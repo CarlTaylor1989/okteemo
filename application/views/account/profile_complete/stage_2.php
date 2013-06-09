@@ -2,7 +2,17 @@
 	<div class="container">
 		<div class="row">
 			<div class="span12">
+				<h1>Step 2 of 3</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="span3">
 				<h3>Edit your profile</h3>
+			</div>
+			<div class="span9">
+				<div id="progress_tip" class="progress progress-striped progress-success active" data-toggle="tooltip" title="Complete the step process to complete your profile!">
+					<div class="bar" style="width: 66%"></div>
+				</div>
 			</div>
 		</div>
 		<div class="row">
