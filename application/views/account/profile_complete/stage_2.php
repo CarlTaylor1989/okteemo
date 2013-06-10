@@ -7,7 +7,7 @@
 		</div>
 		<div class="row">
 			<div class="span3">
-				<h3>Edit your profile</h3>
+				<h3>Edit your profile <?php echo $summoner_name; ?></h3>
 			</div>
 			<div class="span9">
 				<div id="progress_tip" class="progress progress-striped progress-success active" data-toggle="tooltip" title="Complete the step process to complete your profile!">

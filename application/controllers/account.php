@@ -16,12 +16,14 @@ class Account extends MY_Controller {
     	}
 
     	$this->load->model('profile');
+    	$this->load->model('api');
     	$this->data = array(
     		'title' 			=> 'Edit your profile',
     		'body'				=> 'account-profile',
     		'username'			=> $this->profile->username(),
     		'profile_complete' 	=> $this->profile->check_profile_complete(),
-    		'stage_view'		=> 'account/profile_complete/stage_'.$this->profile->check_profile_complete()
+    		'stage_view'		=> 'account/profile_complete/stage_'.$this->profile->check_profile_complete(),
+    		'summoner_name'		=> $this->api->summoner_name()
     	);
 
     	$stage_view = $this->data['profile_complete'];
@@ -48,6 +50,17 @@ class Account extends MY_Controller {
     	{
     		redirect('/account/edit-profile/'.$stage_view, 'refresh');
     	}
+	}
+
+	public function api_test()
+	{
+		$this->load->model('api');
+		$this->data = array(
+    		'title' 			=> 'Edit your profile',
+    		'body'				=> 'account-profile',
+    		'summoner_name'		=> $this->api->summoner_name(),
+    		'icon_id'			=> $this->api->icon_id()
+    	);
 	}
 
 	public function login()
