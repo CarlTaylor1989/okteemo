@@ -7,16 +7,16 @@ class Api extends MY_Model {
         parent::__construct();
     }
 
-    public function summoner_name()
+    public function player()
     {
         $json_url = 'http://api.captainteemo.com/player/euw/irazorx';
         $json_string = '';
 
         $ch = curl_init($json_url);
         $options = array(
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_HTTPHEADER => array('Content-type: application/json') ,
-        CURLOPT_POSTFIELDS => $json_string
+            CURLOPT_RETURNTRANSFER  => true,
+            CURLOPT_HTTPHEADER      => array('Content-type: application/json'),
+            CURLOPT_POSTFIELDS      => $json_string
         );
 
         curl_setopt_array($ch, $options);
@@ -24,8 +24,10 @@ class Api extends MY_Model {
         $data = json_decode($result, true);
         curl_close($ch);
 
-        $summoner_name = $data['data']['name'];
-        return $summoner_name;
+        $api_call['summoner_name'] = $data['data']['name'];
+        $api_call['icon_id'] = $data['data']['icon'];
+        $api_call['level'] = $data['data']['level'];
+        return $api_call;
     }
 
     public function icon_id()

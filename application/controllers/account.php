@@ -23,11 +23,7 @@ class Account extends MY_Controller {
     		'username'			=> $this->profile->username(),
     		'profile_complete' 	=> $this->profile->check_profile_complete(),
     		'stage_view'		=> 'account/profile_complete/stage_'.$this->profile->check_profile_complete(),
-    		'summoner_name'		=> $this->api->summoner_name()
     	);
-
-    	$stage_view = $this->data['profile_complete'];
-    	$username = $this->data['username'];
 
     	if($stage_view == 1)
     	{
@@ -55,11 +51,12 @@ class Account extends MY_Controller {
 	public function api_test()
 	{
 		$this->load->model('api');
+        $api_call = $this->api->player();
 		$this->data = array(
     		'title' 			=> 'Edit your profile',
     		'body'				=> 'account-profile',
-    		'summoner_name'		=> $this->api->summoner_name(),
-    		'icon_id'			=> $this->api->icon_id()
+    		'summoner_name'		=> $api_call['summoner_name'],
+    		'icon_id'			=> $api_call['icon_id']
     	);
 	}
 
