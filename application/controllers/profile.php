@@ -20,28 +20,36 @@ class Profile extends MY_Controller {
 
 		$info = $player->info();
 
-		$myData = array();
-
 		$games = $player->recent_games();
 
+		$game_date = array();
+		
 		foreach($games['gameStatistics']['array'] as $key => $gameStatistic) {
 			$game_date[strtotime($gameStatistic['createDate'])] = $gameStatistic;
 		}
 
-		$statistics = array();
-		foreach ($game_date as $game => $data) {
-			$statistics[] = $data['statistics'];
-			//$statistics[$data[0]['array'][0]['statType']] = $data['statistics'];
+		foreach($game_date['array'] as $key => $gameStatistic) {
+				print_r($gameStatistic.' ');
 		}
-var_dump($statistics);
-		exit;
-		
-		// foreach($games['gameStatistics']['array'][0]['statistics']['array'] as $key => $gameStatistic) {
-		// 	$myData[$gameStatistic['statType']] = $gameStatistic;
-		// 	asort($myData);
-		// }
 
 		print_r($myData);
+		exit;
+
+		
+
+		krsort($game_date);
+
+		foreach ($game_date as $game => $data) {
+			$statistics = $data;
+		}
+
+		print_r($statistics);
+		exit;
+
+		foreach($statistics['array'] as $key => $gameStatistic) {
+			$myData[$gameStatistic['statType']] = $gameStatistic;
+			asort($myData);
+		}
 
 		$champion_used = $games['gameStatistics']['array'][0]['skinName'];
 		$ranked_game = $games['gameStatistics']['array'][0]['ranked'];
