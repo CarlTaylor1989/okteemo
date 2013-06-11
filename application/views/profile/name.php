@@ -1,4 +1,3 @@
-<!-- <h1><?php echo $summoner_name; ?></h1><br /><h3>Icon id: <?php echo $icon_id; ?></h3> -->
 <div class="bg">
 	<div class="container">
 		<div class="row">
@@ -12,9 +11,11 @@
 				<h2>Last Game Played</h2>
 				<p><strong>Ranked Match:</strong> <?php if($ranked == 1) echo 'Yes'; else 'No'; ?></p>
 				<p><strong>Champion:</strong> <?php echo $champion_used; ?></p>
+				<p><strong>Champions killed:</strong> <?php echo $champions_killed; ?></p>
+				<p><strong>Total minions killed:</strong> <?php echo $minions_killed; ?></p>
 				<p><strong>Largest kill spree:</strong> <?php echo $largest_kill_spree; ?></p>
 				<p><strong>Largest multi kill:</strong> <?php echo $largest_multi_kill; ?></p>
-				<p><strong>Total minions killed:</strong> <?php echo $minions_killed; ?></p>
+				
 			</div>
 		</div>
 	</div>

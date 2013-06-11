@@ -20,18 +20,35 @@ class Profile extends MY_Controller {
 
 		$info = $player->info();
 
+		$myData = array();
+
 		$games = $player->recent_games();
+
+		foreach($games['gameStatistics']['array'] as $key => $gameStatistic) {
+			$game_date[strtotime($gameStatistic['createDate'])] = $gameStatistic;
+		}
+
+		$statistics = array();
+		foreach ($game_date as $game => $data) {
+			$statistics[] = $data['statistics'];
+			//$statistics[$data[0]['array'][0]['statType']] = $data['statistics'];
+		}
+var_dump($statistics);
+		exit;
+		
+		// foreach($games['gameStatistics']['array'][0]['statistics']['array'] as $key => $gameStatistic) {
+		// 	$myData[$gameStatistic['statType']] = $gameStatistic;
+		// 	asort($myData);
+		// }
+
+		print_r($myData);
 
 		$champion_used = $games['gameStatistics']['array'][0]['skinName'];
 		$ranked_game = $games['gameStatistics']['array'][0]['ranked'];
-		$largest_kill_spree = $games['gameStatistics']['array'][0]['statistics']['array'];
-		$largest_multi_kill = $games['gameStatistics']['array'][0]['statistics']['array'][1]['value'];
-		$minions_killed = $games['gameStatistics']['array'][0]['statistics']['array'][9]['value'];
-
-		$keys = array_keys($games['gameStatistics']['array'][0]['statistics']['array']);
-		$largest_multi = $games['gameStatistics']['array'][0]['statistics']['array'][$keys[count($keys)-1]]['value'];
-
-		print_r($games['gameStatistics']['array'][0]['statistics']['array']);
+		$largest_kill_spree = $myData['LARGEST_KILLING_SPREE']['value'];
+		$largest_multi_kill = $myData['LARGEST_MULTI_KILL']['value'];
+		$minions_killed = $myData['MINIONS_KILLED']['value'];
+		$champions_killed = $myData['CHAMPIONS_KILLED']['value'];
 
 		// $this->load->model('api');
 		$this->data = array(
@@ -44,7 +61,8 @@ class Profile extends MY_Controller {
     		'ranked'				=> $ranked_game,
     		'largest_kill_spree'	=> $largest_kill_spree,
     		'largest_multi_kill'	=> $largest_multi_kill,
-    		'minions_killed'		=> $minions_killed
+    		'minions_killed'		=> $minions_killed,
+    		'champions_killed'		=> $champions_killed
 
     		//'summoner_name'	=> $this->api->summoner_name(),
     		//'icon_id'			=> $this->api->icon_id()
