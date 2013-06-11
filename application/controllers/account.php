@@ -54,12 +54,24 @@ class Account extends MY_Controller {
 
 	public function api_test()
 	{
-		$this->load->model('api');
+		
+		$url = array('url' => base_url());
+		$this->load->library('Quickfind_request', $url);
+
+		$player = new Quickfind_player('euw', 'irazorx', array('array'=>true, 'contact'=>'CarlTaylor1989'));
+
+		$info = $player->info();
+
+		// $this->load->model('api');
 		$this->data = array(
     		'title' 			=> 'Edit your profile',
     		'body'				=> 'account-profile',
-    		'summoner_name'		=> $this->api->summoner_name(),
-    		'icon_id'			=> $this->api->icon_id()
+    		'summoner_name'		=> $info['name'],
+    		'summoner_level'	=> $info['level'],
+    		'summoner_platform'	=> 'Europe West'
+
+    		//'summoner_name'	=> $this->api->summoner_name(),
+    		//'icon_id'			=> $this->api->icon_id()
     	);
 	}
 

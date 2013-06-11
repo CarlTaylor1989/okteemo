@@ -57,26 +57,8 @@
 <script src="<?php echo base_url(); ?>assets/js/languages/jquery.validationEngine-en.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/jquery.validationEngine.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/bootstrap-select.js"></script>
-<script type="text/javascript" src="http://requirejs.org/docs/release/2.1.6/minified/require.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-
-	var myurl = 'http://api.captainteemo.com/player/euw/irazorx';
-
-	$.ajax({
-	  type: "GET",
-	  url: myurl,
-	  dataType:'json',
-	  success: function(json)
-	  {
-	  	console.log('it worked!!');
-	  },
-	  error: function(json)
-	  {
-	  	console.log('did not work :(');
-	  }
-	});
-
 	$('.load-fade').css('display', 'none');
 	$('.load-fade').fadeIn(900);
 	$('#progress_tip').tooltip();

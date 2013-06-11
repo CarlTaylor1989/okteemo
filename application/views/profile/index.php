@@ -3,8 +3,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="span12">
-				<h1><?php echo $summoner_name; ?></h1>
-				<h4><?php echo $summoner_platform; ?> - Level <?php echo $summoner_level; ?></h4>
+				
 			</div>
 		</div>
 	</div>

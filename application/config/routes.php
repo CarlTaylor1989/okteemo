@@ -41,6 +41,7 @@
 $route['default_controller'] = "home";
 $route['account/edit-profile'] = "account/edit_profile";
 $route['account/edit-profile/(:any)'] = "account/edit_profile/$1";
+$route['profile/(:any)'] = "profile/name/$2";
 $route['logout'] = "account/logout";
 $route['404_override'] = '';
 

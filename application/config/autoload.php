@@ -54,7 +54,7 @@ $autoload['packages'] = array(
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array('format','session','Ion_auth','database');
+$autoload['libraries'] = array('format','session','Ion_auth','database','Quickfind_player','Quickfind_team','Quickfind_platform','Quickfind_datadragon');
 
 
 /*
