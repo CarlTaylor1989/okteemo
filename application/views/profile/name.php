@@ -15,7 +15,6 @@
 				<p><strong>Total minions killed:</strong> <?php echo $minions_killed; ?></p>
 				<p><strong>Largest kill spree:</strong> <?php echo $largest_kill_spree; ?></p>
 				<p><strong>Largest multi kill:</strong> <?php echo $largest_multi_kill; ?></p>
-				
 			</div>
 		</div>
 	</div>

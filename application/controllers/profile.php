@@ -15,41 +15,48 @@ class Profile extends MY_Controller {
 
 		$url = array('url' => base_url());
 		$this->load->library('Quickfind_request', $url);
-
 		$player = new Quickfind_player('euw', $url_summoner_name, array('array'=>true, 'contact'=>'CarlTaylor1989'));
 
 		$info = $player->info();
 
-		$games = $player->recent_games();
+		$recent_games = $player->recent_games();
+
+		print_r($recent_games);
+		exit;
 
 		$game_date = array();
 		
-		foreach($games['gameStatistics']['array'] as $key => $gameStatistic) {
-			$game_date[strtotime($gameStatistic['createDate'])] = $gameStatistic;
+		foreach($recent_games['gameStatistics']['array'] as $key => $value) {
+			$game_date[strtotime($gameStatistic['createDate'])] = $value;
 		}
-
-		foreach($game_date['array'] as $key => $gameStatistic) {
-				print_r($gameStatistic.' ');
-		}
-
-		print_r($myData);
-		exit;
-
-		
-
 		krsort($game_date);
 
-		foreach ($game_date as $game => $data) {
+		print_r($game_date);
+		//exit;
+
+		foreach($test as $game => $data) {
 			$statistics = $data;
 		}
+		
+		
 
-		print_r($statistics);
-		exit;
-
-		foreach($statistics['array'] as $key => $gameStatistic) {
+		foreach($statistics as $key => $gameStatistic) {
 			$myData[$gameStatistic['statType']] = $gameStatistic;
 			asort($myData);
 		}
+
+		// What Chris gave me
+		// $matches = array();
+		// foreach($apiData as $key => $value) {
+		//     $newMatch = $value;
+		//     $newMatch['time'] = $key;
+		//     $matches[] = $newMatch;
+		// }
+
+		// foreach($statistics['array'] as $key => $gameStatistic) {
+		// 	$myData[$gameStatistic['statType']] = $gameStatistic;
+		// 	asort($myData);
+		// }
 
 		$champion_used = $games['gameStatistics']['array'][0]['skinName'];
 		$ranked_game = $games['gameStatistics']['array'][0]['ranked'];
