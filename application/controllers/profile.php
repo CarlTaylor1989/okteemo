@@ -30,14 +30,8 @@ class Profile extends MY_Controller {
 			$createDate = strtotime($value_match_data['createDate']);
 			$statistics[$createDate] = $value_match_data;
 			$skinName[$createDate] = $statistics[$createDate]['skinName'];
+			krsort($skinName);
 		}
-
-		krsort($skinName);
-
-		// foreach($statistics['array'] as $key => $gameStatistic) {
-		// 	$myData[$gameStatistic['statType']] = $gameStatistic;
-		// 	asort($myData);
-		// }
 
 		// $champion_used = $games['gameStatistics']['array'][0]['skinName'];
 		// $ranked_game = $games['gameStatistics']['array'][0]['ranked'];
