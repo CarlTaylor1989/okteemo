@@ -21,31 +21,18 @@ class Profile extends MY_Controller {
 
 		$recent_games_data = $player->recent_games();
 
+		$dates = array();
 		$matches = array();
 		$gameType = array();
-		$myData = array();
+		$m = array();
 		
 		foreach($recent_games_data['gameStatistics']['array'] as $key_match_data => $value_match_data) {
-		    $matches[] = $value_match_data['statistics'];
-		    $gameType[] = $value_match_data['statistics']['array'];
-		    //$someData['assists'] = array('assists' => $someVal, 'value' => $someVal);
+			$createDate = strtotime($value_match_data['createDate']);
+			$statistics[$createDate] = $value_match_data;
+			$skinName[$createDate] = $statistics[$createDate]['skinName'];
 		}
 
-		print_r($gameType);
-
-		exit;
-
-		// foreach($test as $game => $data) {
-		// 	$statistics = $data;
-		// }
-
-		// What Chris gave me
-		// $matches = array();
-		// foreach($apiData as $key => $value) {
-		//     $newMatch = $value;
-		//     $newMatch['time'] = $key;
-		//     $matches[] = $newMatch;
-		// }
+		krsort($skinName);
 
 		// foreach($statistics['array'] as $key => $gameStatistic) {
 		// 	$myData[$gameStatistic['statType']] = $gameStatistic;
@@ -66,7 +53,7 @@ class Profile extends MY_Controller {
     		'summoner_name'			=> $info['name'],
     		'summoner_level'		=> $info['level'],
     		'summoner_platform'		=> 'Europe West',
-    		'match_array'			=> $myData
+    		'skin_name'				=> $skinName
 
     		//'summoner_name'	=> $this->api->summoner_name(),
     		//'icon_id'			=> $this->api->icon_id()
