@@ -19,31 +19,25 @@ class Profile extends MY_Controller {
 
 		$info = $player->info();
 
-		$recent_games = $player->recent_games();
+		$recent_games_data = $player->recent_games();
 
-		print_r($recent_games);
+		$matches = array();
+		$gameType = array();
+		$myData = array();
+		
+		foreach($recent_games_data['gameStatistics']['array'] as $key_match_data => $value_match_data) {
+		    $matches[] = $value_match_data['statistics'];
+		    $gameType[] = $value_match_data['statistics']['array'];
+		    //$someData['assists'] = array('assists' => $someVal, 'value' => $someVal);
+		}
+
+		print_r($gameType);
+
 		exit;
 
-		$game_date = array();
-		
-		foreach($recent_games['gameStatistics']['array'] as $key => $value) {
-			$game_date[strtotime($gameStatistic['createDate'])] = $value;
-		}
-		krsort($game_date);
-
-		print_r($game_date);
-		//exit;
-
-		foreach($test as $game => $data) {
-			$statistics = $data;
-		}
-		
-		
-
-		foreach($statistics as $key => $gameStatistic) {
-			$myData[$gameStatistic['statType']] = $gameStatistic;
-			asort($myData);
-		}
+		// foreach($test as $game => $data) {
+		// 	$statistics = $data;
+		// }
 
 		// What Chris gave me
 		// $matches = array();
@@ -58,12 +52,12 @@ class Profile extends MY_Controller {
 		// 	asort($myData);
 		// }
 
-		$champion_used = $games['gameStatistics']['array'][0]['skinName'];
-		$ranked_game = $games['gameStatistics']['array'][0]['ranked'];
-		$largest_kill_spree = $myData['LARGEST_KILLING_SPREE']['value'];
-		$largest_multi_kill = $myData['LARGEST_MULTI_KILL']['value'];
-		$minions_killed = $myData['MINIONS_KILLED']['value'];
-		$champions_killed = $myData['CHAMPIONS_KILLED']['value'];
+		// $champion_used = $games['gameStatistics']['array'][0]['skinName'];
+		// $ranked_game = $games['gameStatistics']['array'][0]['ranked'];
+		// $largest_kill_spree = $myData['LARGEST_KILLING_SPREE']['value'];
+		// $largest_multi_kill = $myData['LARGEST_MULTI_KILL']['value'];
+		// $minions_killed = $myData['MINIONS_KILLED']['value'];
+		// $champions_killed = $myData['CHAMPIONS_KILLED']['value'];
 
 		// $this->load->model('api');
 		$this->data = array(
@@ -72,12 +66,7 @@ class Profile extends MY_Controller {
     		'summoner_name'			=> $info['name'],
     		'summoner_level'		=> $info['level'],
     		'summoner_platform'		=> 'Europe West',
-    		'champion_used'			=> $champion_used,
-    		'ranked'				=> $ranked_game,
-    		'largest_kill_spree'	=> $largest_kill_spree,
-    		'largest_multi_kill'	=> $largest_multi_kill,
-    		'minions_killed'		=> $minions_killed,
-    		'champions_killed'		=> $champions_killed
+    		'match_array'			=> $myData
 
     		//'summoner_name'	=> $this->api->summoner_name(),
     		//'icon_id'			=> $this->api->icon_id()
