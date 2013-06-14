@@ -11,8 +11,7 @@ class Profile extends MY_Controller {
 	}
 	public function name()
 	{
-		$url_summoner_platform = $this->uri->segment(2);
-		$url_summoner_name = $this->uri->segment(3);
+		$url_summoner_name = $this->uri->segment(2);
 
 		$url = array('url' => base_url());
 		$this->load->library('Quickfind_request', $url);
