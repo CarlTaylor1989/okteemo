@@ -15,15 +15,23 @@ class Profile extends MY_Controller {
 
 		$url = array('url' => base_url());
 		$this->load->library('Quickfind_request', $url);
-		$player = new Quickfind_player($url_summoner_platform, $url_summoner_name, array('array' => true, 'contact' => 'CarlTaylor1989'));
+		$player = new Quickfind_player('euw', $url_summoner_name, array('array' => true, 'contact' => 'CarlTaylor1989'));
 
 		$info = $player->info();
-
 		$recent_games_data = $player->recent_games();
+		$season_stats = $player->ranked_stats(3);
 
 		$statistics = array();
 		$statistics_per = array();
 		$temp = array();
+		$tempt = array();
+		$test = array();
+
+		foreach ($season_stats['lifetimeStatistics']['array'] as $key_lifetime_data => $value_lifetime_data) {
+			$test[] = $value_lifetime_data;
+		}
+
+		print_r($test); exit;
 
 		foreach($recent_games_data['gameStatistics']['array'] as $key_match_data => $value_match_data) {
 			$createDate = strtotime($value_match_data['createDate']);
@@ -31,8 +39,6 @@ class Profile extends MY_Controller {
 			$statistics_per[$createDate] = $statistics[$createDate]['statistics']['array'];
 			krsort($statistics);
 		}
-
-		// print_r($recent_games_data); exit;
 		
 		foreach($statistics_per as $key => $stats) {
 			foreach($stats as $stat) {

@@ -115,6 +115,18 @@ h3#myModalLabel {
 	text-shadow: 1px 1px 1px #000000;
     filter: dropshadow(color=#000000, offx=1, offy=1);
 }
+.game-match {
+	display: block;
+	clear: right;
+	float: left;
+	margin: 10px 0 10px 0;
+}
+.game-match h4 {
+	margin-top: 0px;
+}
+.game-match-info {
+	margin-left: 20px;
+}
 /* Step 1, 2, 3 well */
 .bg .well {
 	padding-top: 0px;
