@@ -17,7 +17,7 @@
 					Navigation here
 				</div>
 				<div class="span8">
-					<?php foreach ($temp as $date => $value) { ?>
+					<?php foreach($temp as $date => $value) { ?>
 						<div class="game-match">
 							<img src="<?php echo base_url(); ?>assets/img/lol_assets/icons/<?php echo $statistics[$date]['championId'] ?>.jpg" class="pull-left" />
 							<div class="pull-left game-match-info">
@@ -27,6 +27,13 @@
 							</div>
 						</div>
 					<?php } ?>
+					<div class="game-match" style="clear: both;">
+					<?php foreach($season_stats as $champ_id => $stat_value) { ?>
+						<?php if($champ_id != 0) { ?>
+							<div class="pull-left game-match-info"><?php echo $champ_id; ?>: Sessions played - <?php echo $stat_value['TOTAL_SESSIONS_PLAYED']; ?><br /><br /></div>
+						<?php } ?>
+					<?php } ?>
+					</div>
 				</div>
 			</div>
 		</div>

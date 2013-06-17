@@ -24,14 +24,28 @@ class Profile extends MY_Controller {
 		$statistics = array();
 		$statistics_per = array();
 		$temp = array();
-		$tempt = array();
+		$yes = array();
 		$test = array();
+		$temps = array();
 
 		foreach ($season_stats['lifetimeStatistics']['array'] as $key_lifetime_data => $value_lifetime_data) {
-			$test[] = $value_lifetime_data;
+			$champId = $value_lifetime_data['championId'];
+			$statTypeid = $value_lifetime_data['statType'];
+			$test[$champId][] = $value_lifetime_data;
 		}
 
-		print_r($test); exit;
+		foreach ($test as $keys => $tool) {
+			foreach ($tool as $keyd) {
+				$temps[$keys][$keyd['statType']] = $keyd['value'];
+			}
+			//ksort($temps);
+		}
+
+		function comp($a, $b) {
+		    return $a['TOTAL_SESSIONS_PLAYED'] < $b['TOTAL_SESSIONS_PLAYED']?1:-1;
+		}
+
+		uasort($temps, 'comp');
 
 		foreach($recent_games_data['gameStatistics']['array'] as $key_match_data => $value_match_data) {
 			$createDate = strtotime($value_match_data['createDate']);
@@ -55,7 +69,9 @@ class Profile extends MY_Controller {
     		'summoner_icon'			=> $info['icon'],
     		'summoner_platform'		=> 'Europe West',
     		'statistics'			=> $statistics,
-    		'temp'					=> $temp
+    		'temp'					=> $temp,
+    		'season_stats'			=> $temps,
+    		'test'					=> $test
     	);
 	}
 }
