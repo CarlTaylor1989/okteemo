@@ -15,7 +15,7 @@ class Profile extends MY_Controller {
 
 		$url = array('url' => base_url());
 		$this->load->library('Quickfind_request', $url);
-		$player = new Quickfind_player('euw', $url_summoner_name, array('array' => true, 'contact' => 'CarlTaylor1989'));
+		$player = new Quickfind_player('euw', $url_summoner_name, array('array' => true, 'contact' => 'CarlTaylor1989@gmail.com'));
 
 		$info = $player->info();
 		$recent_games_data = $player->recent_games();

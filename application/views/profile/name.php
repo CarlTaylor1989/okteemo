@@ -28,9 +28,12 @@
 						</div>
 					<?php } ?>
 					<div class="game-match" style="clear: both;">
-					<?php foreach($season_stats as $champ_id => $stat_value) { ?>
+						<!-- <canvas id="myChart" width="400" height="400"></canvas> -->
+					<?php foreach(array_slice($season_stats, 0, 5, true) as $champ_id => $stat_value) { ?>
 						<?php if($champ_id != 0) { ?>
 							<div class="pull-left game-match-info"><?php echo $champ_id; ?>: Sessions played - <?php echo $stat_value['TOTAL_SESSIONS_PLAYED']; ?><br /><br /></div>
+
+
 						<?php } ?>
 					<?php } ?>
 					</div>
@@ -39,3 +42,19 @@
 		</div>
 	</div>
 </div>
+<script src="<?php echo base_url(); ?>assets/js/Chart.js"></script>
+<script type="text/javascript">
+var barChartData = {
+	labels : ["January","February","March","April","May","June","July"],
+	datasets : [
+		{
+			fillColor : "rgba(220,220,220,0.5)",
+			strokeColor : "rgba(220,220,220,1)",
+			data : [65,59,90,81,56,55,40]
+		}
+	]
+
+}
+
+var myLine = new Chart(document.getElementById("myChart").getContext("2d")).Bar(barChartData);
+</script>
