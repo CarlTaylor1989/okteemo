@@ -48,6 +48,8 @@
 </div>
 <script src="<?php echo base_url(); ?>assets/js/Chart.js"></script>
 <script type="text/javascript">
+var options = {
+}
 var barChartData = {
 	labels : [<?php foreach($champ_name as $champ_id => $stat_value) {
 						foreach ($stat_value as $cn => $cs) {
@@ -72,5 +74,5 @@ var barChartData = {
 
 }
 
-var myLine = new Chart(document.getElementById("myChart").getContext("2d")).Bar(barChartData);
+var myLine = new Chart(document.getElementById("myChart").getContext("2d")).Bar(barChartData,options);
 </script>
