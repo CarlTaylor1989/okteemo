@@ -11,6 +11,8 @@ class Profile extends MY_Controller {
 	}
 	public function name()
 	{
+		$this->load->model('data_assets');
+
 		$url_summoner_name = $this->uri->segment(2);
 
 		$url = array('url' => base_url());
@@ -27,6 +29,7 @@ class Profile extends MY_Controller {
 		$yes = array();
 		$test = array();
 		$temps = array();
+		$champ_name = array();
 
 		foreach ($season_stats['lifetimeStatistics']['array'] as $key_lifetime_data => $value_lifetime_data) {
 			$champId = $value_lifetime_data['championId'];
@@ -38,7 +41,6 @@ class Profile extends MY_Controller {
 			foreach ($tool as $keyd) {
 				$temps[$keys][$keyd['statType']] = $keyd['value'];
 			}
-			//ksort($temps);
 		}
 
 		function comp($a, $b) {
@@ -61,6 +63,14 @@ class Profile extends MY_Controller {
 			krsort($temp);
 		}
 
+		foreach(array_slice($temps, 0, 6, true) as $champ_id => $stat_value) {
+			$champ_name[$champ_id] = $this->data_assets->champion_id($champ_id);
+			$ch = $champ_name[$champ_id];
+			$champ_name_value[$champ_id][$ch] = $stat_value;
+		}
+
+		//print_r($champ_name_value); exit;
+
 		$this->data = array(
     		'title' 				=> 'Profile',
     		'body'					=> 'profile',
@@ -71,6 +81,7 @@ class Profile extends MY_Controller {
     		'statistics'			=> $statistics,
     		'temp'					=> $temp,
     		'season_stats'			=> $temps,
+    		'champ_name'			=> $champ_name_value,
     		'test'					=> $test
     	);
 	}
