@@ -30,7 +30,8 @@
 					<?php } ?>
 					<div class="game-match" style="clear: both;">
 						<h2>Latest Season Stats</h2>
-						<canvas id="myChart" width="400" height="400"></canvas>
+						<!-- <canvas id="myChart" width="400" height="400"></canvas> -->
+						<div id="stats_chart" style="width: 400px; height:300px;"></div>
 					<?php
 					//if($champ_name){
 					//foreach($champ_name as $champ_id => $stat_value) {
@@ -48,6 +49,59 @@
 </div>
 <script src="<?php echo base_url(); ?>assets/js/Chart.js"></script>
 <script type="text/javascript">
+$(document).ready(function(){
+	$('#stats_chart').highcharts({
+        chart: {
+            type: 'column',
+            backgroundColor: "#F5F5F5",
+        },
+        xAxis: {
+            categories: [<?php foreach($champ_name as $champ_id => $stat_value) {
+						foreach ($stat_value as $cn => $cs) {
+							if($champ_id != 0) {
+								echo '"'.$cn.'",';
+							}
+						} 
+					} ?>]
+        },
+        yAxis: {
+            title: {
+                text: 'Matches Played'
+            }
+        },
+        tooltip: {
+            formatter: function() {
+                return '<b>'+ this.x +'</b><br/>'+
+                    this.series.name +': '+ this.y +'<br/>';
+            }
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+            name: 'Games Played',
+            data: [<?php foreach($champ_name as $champ_id => $stat_value) {
+						foreach ($stat_value as $cn => $cs) {
+							if($champ_id != 0) {
+								echo $cs['TOTAL_SESSIONS_PLAYED'].',';
+							}
+						} 
+					} ?>]
+        }]
+    });
+});
+
+
+
+
+
+
+
+
+
 var options = {
 }
 var barChartData = {

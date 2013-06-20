@@ -25,6 +25,9 @@ body {
 .center {
 	text-align: center;
 }
+.datepicker {
+	color: #333333;
+}
 
 /* CONTENT CSS */
 .bg {

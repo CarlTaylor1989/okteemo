@@ -24,6 +24,15 @@
 					    </div>
 					</div>
 					<div class="control-group">
+					    <label class="control-label" for="basic_age">DOB</label>
+					    <div class="controls">
+					    	<div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+  								<input class="span2" size="16" type="text" value="12-02-2012" />
+  								<span class="add-on"><i class="icon-th"></i></span>
+							</div>
+					    </div>
+					</div>
+					<div class="control-group">
 					    <div class="controls">
 					   		<button type="submit" class="btn btn-primary">Next <i class="icon-arrow-right icon-white"></i></button>
 					  	</div>

@@ -2,9 +2,14 @@
 
 class Data_assets extends MY_Model {
 
+    private $contact_info = array('array' => true, 'contact' => 'CarlTaylor1989@gmail.com');
+    private $url;
+
     function __construct()
     {
         parent::__construct();
+
+        $this->url = array('url' => base_url());
     }
 
     function champion_id($champId)
@@ -26,18 +31,17 @@ class Data_assets extends MY_Model {
 
     function player_info($url_summoner_platform = null, $url_summoner_name)
     {
-        $url = array('url' => base_url());
-        $this->load->library('Quickfind_request', $url);
-        $player = new Quickfind_player('euw', $url_summoner_name, array('array' => true, 'contact' => 'CarlTaylor1989@gmail.com'));
+        $this->load->library('Quickfind_request', $this->url);
+        $player = new Quickfind_player($url_summoner_platform, $url_summoner_name, $this->contact_info);
         $info = $player->info();
+        
         return $info;
     }
 
     function last_ten_matches($url_summoner_platform = null, $url_summoner_name)
     {
-        $url = array('url' => base_url());
-        $this->load->library('Quickfind_request', $url);
-        $player = new Quickfind_player('euw', $url_summoner_name, array('array' => true, 'contact' => 'CarlTaylor1989@gmail.com'));
+        $this->load->library('Quickfind_request', $this->url);
+        $player = new Quickfind_player($url_summoner_platform, $url_summoner_name, $this->contact_info);
         $info = $player->info();
         $recent_games_data = $player->recent_games();
 
@@ -66,9 +70,8 @@ class Data_assets extends MY_Model {
 
     function latest_season_stats($url_summoner_platform = null, $url_summoner_name)
     {
-        $url = array('url' => base_url());
-        $this->load->library('Quickfind_request', $url);
-        $player = new Quickfind_player('euw', $url_summoner_name, array('array' => true, 'contact' => 'CarlTaylor1989@gmail.com'));
+        $this->load->library('Quickfind_request', $this->url);
+        $player = new Quickfind_player($url_summoner_platform, $url_summoner_name, $this->contact_info);
         $info = $player->info();
         $season_stats = $player->ranked_stats(3);
 

@@ -19,8 +19,11 @@
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap.css" />
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap.icon-large.min.css">
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/validationEngine.jquery.css" />
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/datepicker.css" />
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap-select.css" />
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/default.css" />
+<script src="<?php echo base_url(); ?>assets/js/jquery-1.10.0.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url(); ?>assets/js/highcharts.js"></script>
 </head>
 
 <body id="<?php echo $body; ?>">
@@ -51,14 +54,15 @@
 </div> <!--! end of #container -->
 
 <!-- Javascript at the bottom for fast page loading -->
-<script src="<?php echo base_url(); ?>assets/js/jquery-1.10.0.min.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/bootstrap.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/bootstrap-select.js"></script>
+<script src="<?php echo base_url(); ?>assets/js/bootstrap-datepicker.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/libs/modernizr-2.5.3.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/languages/jquery.validationEngine-en.js"></script>
 <script src="<?php echo base_url(); ?>assets/js/jquery.validationEngine.js"></script>
-<script src="<?php echo base_url(); ?>assets/js/bootstrap-select.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
+	$('#dp3').datepicker({viewMode: 'years'})
 	$('.load-fade').css('display', 'none');
 	$('.load-fade').fadeIn(900);
 	$('#progress_tip').tooltip();

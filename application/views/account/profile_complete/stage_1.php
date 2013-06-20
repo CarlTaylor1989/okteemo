@@ -28,9 +28,12 @@
 					    </div>
 					</div>
 					<div class="control-group">
-					    <label class="control-label" for="basic_age">Age</label>
+					    <label class="control-label" for="basic_age">Date of Birth</label>
 					    <div class="controls">
-					    	<input type="password" id="basic_age" name="basic_age" placeholder="Age">
+					    	<div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+  								<input class="span3" type="text" value="12-02-2012" readonly />
+  								<span class="add-on"><i class="icon-th"></i></span>
+							</div>
 					    </div>
 					</div>
 					<div class="control-group">
