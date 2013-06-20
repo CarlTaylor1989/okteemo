@@ -24,20 +24,54 @@ class Data_assets extends MY_Model {
     	}
     }
 
+    function player_info($url_summoner_platform = null, $url_summoner_name)
+    {
+        $url = array('url' => base_url());
+        $this->load->library('Quickfind_request', $url);
+        $player = new Quickfind_player('euw', $url_summoner_name, array('array' => true, 'contact' => 'CarlTaylor1989@gmail.com'));
+        $info = $player->info();
+        return $info;
+    }
+
     function last_ten_matches($url_summoner_platform = null, $url_summoner_name)
     {
         $url = array('url' => base_url());
         $this->load->library('Quickfind_request', $url);
         $player = new Quickfind_player('euw', $url_summoner_name, array('array' => true, 'contact' => 'CarlTaylor1989@gmail.com'));
-
         $info = $player->info();
         $recent_games_data = $player->recent_games();
-        $season_stats = $player->ranked_stats(3);
 
         $statistics = array();
         $statistics_per = array();
         $temp = array();
-        $yes = array();
+
+        foreach($recent_games_data['gameStatistics']['array'] as $key_match_data => $value_match_data) {
+            $createDate = strtotime($value_match_data['createDate']);
+            $statistics[$createDate] = $value_match_data;
+            $statistics_per[$createDate] = $statistics[$createDate]['statistics']['array'];
+            krsort($statistics);
+        }
+        
+        foreach($statistics_per as $key => $stats) {
+            foreach($stats as $stat) {
+                $temp[$key][$stat['statType']] = $stat['value'];
+            }
+            krsort($temp);
+        }
+        $data['temp'] = $temp;
+        $data['statistics'] = $statistics;
+
+        return $data;
+    }
+
+    function latest_season_stats($url_summoner_platform = null, $url_summoner_name)
+    {
+        $url = array('url' => base_url());
+        $this->load->library('Quickfind_request', $url);
+        $player = new Quickfind_player('euw', $url_summoner_name, array('array' => true, 'contact' => 'CarlTaylor1989@gmail.com'));
+        $info = $player->info();
+        $season_stats = $player->ranked_stats(3);
+
         $test = array();
         $temps = array();
         $champ_name = array();
@@ -59,24 +93,14 @@ class Data_assets extends MY_Model {
         }
         uasort($temps, 'comp');
 
-        foreach($recent_games_data['gameStatistics']['array'] as $key_match_data => $value_match_data) {
-            $createDate = strtotime($value_match_data['createDate']);
-            $statistics[$createDate] = $value_match_data;
-            $statistics_per[$createDate] = $statistics[$createDate]['statistics']['array'];
-            krsort($statistics);
-        }
-        
-        foreach($statistics_per as $key => $stats) {
-            foreach($stats as $stat) {
-                $temp[$key][$stat['statType']] = $stat['value'];
-            }
-            krsort($temp);
-        }
-
         foreach(array_slice($temps, 0, 6, true) as $champ_id => $stat_value) {
             $champ_name[$champ_id] = $this->champion_id($champ_id);
             $ch = $champ_name[$champ_id];
             $champ_name_value[$champ_id][$ch] = $stat_value;
         }
+
+        if(empty($champ_name_value)) return false;
+        
+        return $champ_name_value;
     }
 }
