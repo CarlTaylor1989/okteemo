@@ -57,7 +57,6 @@ class Quickfind_request
     }
 
 
-
     /**
      * SHITTY socket shit cause of shitty 301 Response shit
      *
