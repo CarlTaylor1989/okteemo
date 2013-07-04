@@ -30,39 +30,45 @@
 					<?php } ?>
 					<div class="game-match" style="clear: both;">
 						<h2>Latest Season Stats</h2>
-						<!-- <canvas id="myChart" width="400" height="400"></canvas> -->
 						<div id="stats_chart" style="width: 400px; height:300px;"></div>
-					<?php
-					//if($champ_name){
-					//foreach($champ_name as $champ_id => $stat_value) {
-					//	foreach ($stat_value as $cn => $cs) { ?>
-						<?php //if($champ_id != 0) { ?>
-							<!-- <div class="pull-left game-match-info"><?php echo $cn; ?>: Played <?php echo $cs['TOTAL_SESSIONS_PLAYED']; ?> times</div> -->
-							<?php //} ?>
-						<?php //} ?>
-					<?php //} }?>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+<?php
+// Getting champion name for season stats
+foreach($champ_name as $champ_id => $stat_value) {
+	foreach ($stat_value as $cn => $cs) {
+		if($champ_id != 0) {
+			$json_cn[] = $cn;
+		}
+	} 
+}
+// Getting champion total games played stats
+foreach($champ_name as $champ_id => $stat_value) {
+	foreach ($stat_value as $cn => $cs) {
+		if($champ_id != 0) {
+			$json_cs[] = $cs['TOTAL_SESSIONS_PLAYED'];
+		}
+	} 
+}
+?>
 <script src="<?php echo base_url(); ?>assets/js/Chart.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
+	var chart_data = <?php echo json_encode($json_cn); ?>;
 	$('#stats_chart').highcharts({
         chart: {
             type: 'column',
             backgroundColor: "#F5F5F5",
         },
+        title: {
+            text: ' '
+        },
         xAxis: {
-            categories: [<?php foreach($champ_name as $champ_id => $stat_value) {
-						foreach ($stat_value as $cn => $cs) {
-							if($champ_id != 0) {
-								echo '"'.$cn.'",';
-							}
-						} 
-					} ?>]
+            categories: chart_data
         },
         yAxis: {
             title: {
@@ -83,50 +89,9 @@ $(document).ready(function(){
         },
         series: [{
             name: 'Games Played',
-            data: [<?php foreach($champ_name as $champ_id => $stat_value) {
-						foreach ($stat_value as $cn => $cs) {
-							if($champ_id != 0) {
-								echo $cs['TOTAL_SESSIONS_PLAYED'].',';
-							}
-						} 
-					} ?>]
+            data: <?php echo json_encode($json_cs); ?>
+
         }]
     });
 });
-
-
-
-
-
-
-
-
-
-var options = {
-}
-var barChartData = {
-	labels : [<?php foreach($champ_name as $champ_id => $stat_value) {
-						foreach ($stat_value as $cn => $cs) {
-							if($champ_id != 0) {
-								echo '"'.$cn.'",';
-							}
-						} 
-					} ?>],
-	datasets : [
-		{
-			fillColor : "rgba(220,220,220,0.5)",
-			strokeColor : "rgba(220,220,220,1)",
-			data : [<?php foreach($champ_name as $champ_id => $stat_value) {
-						foreach ($stat_value as $cn => $cs) {
-							if($champ_id != 0) {
-								echo $cs['TOTAL_SESSIONS_PLAYED'].',';
-							}
-						} 
-					} ?>]
-		}
-	]
-
-}
-
-var myLine = new Chart(document.getElementById("myChart").getContext("2d")).Bar(barChartData,options);
 </script>
