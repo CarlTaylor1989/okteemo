@@ -1,0 +1,16 @@
+{
+    "_": {
+        "APP_ID": null
+    },
+    "success": true,
+    "requestTime": "2013-07-05T07:51:01-07:00",
+    "shard": "Europe_West:MjIwN2MxYmJmMzMwZWM2NTI3Y2U5MmZlNmVhNWZjYTk1Mzc1NWZjNQ",
+    "data": {
+        "accountId": 21773279,
+        "summonerId": 19111448,
+        "name": "Decelo",
+        "icon": 23,
+        "internalName": "decelo",
+        "level": 30
+    }
+}

@@ -43,7 +43,7 @@ class API_cache {
   /*
    * Makes the api call and updates the cache 
    */
-  private function _update_cache () {
+  public function _update_cache () {
     $fp = fopen($this->_cache_file, 'a+');
 
     if ($fp) {

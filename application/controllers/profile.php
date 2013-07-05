@@ -18,26 +18,29 @@ class Profile extends MY_Controller {
 		$temp = $this->data_assets->last_ten_matches($url_summoner_platform, $url_summoner_name);
 		$champ_name_value = $this->data_assets->latest_season_stats($url_summoner_platform, $url_summoner_name);
 
-		  $this->load->library('API_cache');
+		//print_r($info);
+		//exit;
 
-		  $cache_file = 'statistics_'.$url_summoner_name.'.json';
-		  $api_call = 'http://api.captainteemo.com/player/'.$url_summoner_platform.'/'.$url_summoner_name;
-		  $cache_for = 1; // cache results for five minutes
+		  // $this->load->library('API_cache');
 
-		  $api_cache = new API_cache ($api_call, $cache_for, $cache_file);
-		  if (!$res = $api_cache->get_api_cache())
-		    $res = '{"error": "Could not load cache"}';
+		  // $cache_file = 'statistics_'.$url_summoner_name.'.json';
+		  // $api_call = 'http://api.captainteemo.com/player/'.$url_summoner_platform.'/'.$url_summoner_name;
+		  // $cache_for = 1; // cache results for five minutes
 
-		  ob_start();
-		  echo $res;
-		  $json_body = ob_get_clean();
+		  // $api_cache = new API_cache ($api_call, $cache_for, $cache_file);
+		  // if (!$res = $api_cache->get_api_cache())
+		  //   $res = '{"error": "Could not load cache"}';
 
-		  header ('Content-Type: application/json');
-		  header ('Content-length: ' . strlen($json_body));
-		  header ("Expires: " . $api_cache->get_expires_datetime());
-		  echo $json_body;
+		  // ob_start();
+		  // echo $res;
+		  // $json_body = ob_get_clean();
 
-		  exit;
+		  // header ('Content-Type: application/json');
+		  // header ('Content-length: ' . strlen($json_body));
+		  // header ("Expires: " . $api_cache->get_expires_datetime());
+		  // echo $json_body;
+
+		  // exit;
 
 		$this->data = array(
     		'title' 			=> 'Profile',
