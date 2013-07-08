@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="span12">
 				<h1><?php echo $summoner_name; ?></h1>
-				<h4><?php echo $summoner_platform; ?> - Level <?php echo $summoner_level; ?></h4>
+				<h4><?php echo $summoner_platform; ?> - Level <?php echo $summoner_level; ?> - <?php echo $ranked_solo_league['tier'].' '.$ranked_solo_league['requestorsRank'].' '.$ranked_solo_league['name']; ?></h4>
 			</div>
 		</div>
 		<div class="row">
@@ -12,18 +12,34 @@
 			</div>
 		</div>
 		<div class="row-fluid">
-			<div class="span12 well">
+			<div class="span12">
 				<div class="span4">
-					Navigation here
+					<ul class="nav nav-pills nav-stacked nav-profile">
+						<li><a href="">Profile</a></li>
+						<li><a href="">League</a></li>
+						<li><a href="">Ranked Stats</a></li>
+						<li><a href="">Matches</a></li>
+					</ul>
 				</div>
-				<div class="span8">
+				<div class="span8 well">
+					<h2>League Standing</h2>
+					<table>
+					<?php foreach ($ranked_solo_league['entries']['array'] as $solo_league_key => $solo_league_value) { ?>
+						<?php if($solo_league_value['rank'] == $ranked_solo_league['requestorsRank']){ ?>
+						<tr>
+							<td><?php echo $solo_league_key; ?></td>
+							<td><?php echo $solo_league_value['playerOrTeamName']; ?></td>
+						</tr>
+						<?php } ?>
+					<?php } ?>
+					</table>
 					<h2>Last Game Played</h2>
 					<?php foreach($temp as $date => $value) { ?>
 						<div class="game-match">
 							<img src="<?php echo base_url(); ?>assets/img/lol_assets/icons/<?php echo $statistics[$date]['championId'] ?>.jpg" class="pull-left" />
 							<div class="pull-left game-match-info">
-								<h4><?php date_default_timezone_set("GMT"); echo date("F j, Y, g:i a", $date); ?> <?php if($statistics[$date]['ranked'] == 1) echo '- Ranked Match'; ?> <?php if(isset($value['LOSE'])) echo 'LOST'; else echo 'WON'; ?></h4>
-								<p>K/D/A: <strong><?php if(isset($value['CHAMPIONS_KILLED'])) echo $value['CHAMPIONS_KILLED']; else echo '0'; ?></strong>/<strong><?php echo $value['NUM_DEATHS']; ?></strong>/<strong><?php echo $value['ASSISTS']; ?></strong></p>
+								<h4><?php date_default_timezone_set("GMT"); echo date("F j, Y, g:i a", $date); ?> <?php if($statistics[$date]['ranked'] == 1) echo '- Ranked Match'; else if($statistics[$date]['gameMode'] == 'ARAM') echo ' - ARAM'; ?> <?php if(isset($value['LOSE'])) echo 'LOST'; else echo 'WON'; ?></h4>
+								<p>K/D/A: <strong><?php if(isset($value['CHAMPIONS_KILLED'])) echo $value['CHAMPIONS_KILLED']; else echo '0'; ?></strong>/<strong><?php if(isset($value['NUM_DEATHS'])) echo $value['NUM_DEATHS']; else echo '0'; ?></strong>/<strong><?php if(isset($value['ASSISTS'])) echo $value['ASSISTS']; else echo '0'; ?></strong></p>
 								<p>Total minions killed: <?php echo $value['MINIONS_KILLED']; ?></p>
 							</div>
 						</div>

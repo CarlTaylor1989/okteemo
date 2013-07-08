@@ -1,0 +1,16 @@
+{
+    "_": {
+        "APP_ID": null
+    },
+    "success": true,
+    "requestTime": "2013-07-08T01:32:27-07:00",
+    "shard": "Europe_West:ODU0NGE3MDNjNWQ5OTE0ODQzNzRiMGExZGE0NWQzOWI2MTUwZjIwZQ",
+    "data": {
+        "accountId": 21779999,
+        "summonerId": 19118168,
+        "name": "I Razor X",
+        "icon": 23,
+        "internalName": "irazorx",
+        "level": 30
+    }
+}
