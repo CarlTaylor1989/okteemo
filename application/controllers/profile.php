@@ -51,7 +51,8 @@ class Profile extends MY_Controller {
     		'statistics'			=> $temp['statistics'],
     		'temp'					=> $temp['temp'],
     		'champ_name'			=> $champ_name_value,
-    		'ranked_solo_league' 	=> $ranked_solo_league_data,
+    		'ranked_solo_league' 	=> $ranked_solo_league_data['ranked_solo_data'],
+    		'current_rank'			=> $ranked_solo_league_data['current_rank']
     	);
 	}
 }

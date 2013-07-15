@@ -126,7 +126,9 @@ class Data_assets extends MY_Model {
             $ranked_solo_data[$ranked_solo_key] = $ranked_solo_value;
         }
 
-        return $ranked_solo_data;
+        $rank = $ranked_solo_data['requestorsRank'];
+
+        return array('ranked_solo_data' => $ranked_solo_data, 'current_rank' => $rank);
     }
 
     function latest_season_stats($url_summoner_platform = null, $url_summoner_name)
