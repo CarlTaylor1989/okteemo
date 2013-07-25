@@ -20,11 +20,13 @@
 				<?php echo $this->load->view('assets/_profile_navigation'); ?>
 			</div>
 			<div class="span9">
-				<form class="form-horizontal">
+				<?php echo validation_errors('<div class="error">', '</div>'); ?>
+				<form method="post" class="form-horizontal" id="stage_1" action="/account/edit-profile/1">
+					<input type="hidden" value="1" name="stage_1">
 					<div class="control-group">
 						<label class="control-label" for="basic_name">Name</label>
 					    <div class="controls">
-					     	<input type="text" id="basic_name" name="basic_name" placeholder="Name">
+					     	<input type="text" id="basic_name" name="basic_name" placeholder="Name" value="<?php if(isset($postdata['basic_name'])) { echo $postdata['basic_name']; } ?>">
 					    </div>
 					</div>
 					<div class="control-group">
@@ -33,6 +35,15 @@
 					    	<div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
   								<input class="span3" type="text" value="12-02-2012" readonly />
   								<span class="add-on"><i class="icon-th"></i></span>
+							</div>
+					    </div>
+					</div>
+					<div class="control-group">
+					    <label class="control-label" for="basic_age">Twitter</label>
+					    <div class="controls">
+					    	<div class="input-prepend twitter-handle">
+					    		<span class="add-on">@</span>
+  								<input class="span3" type="text" name="twitter_handle" placeholder="Twitter Handle" value="<?php if(isset($postdata['basic_name'])) { echo $postdata['twitter_handle']; } ?>" />
 							</div>
 					    </div>
 					</div>

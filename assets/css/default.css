@@ -28,6 +28,10 @@ body {
 .datepicker {
 	color: #333333;
 }
+.error {
+	color: red;
+	margin-bottom: 10px;
+}
 
 /* CONTENT CSS */
 .bg {
@@ -179,6 +183,9 @@ h3#myModalLabel {
 }
 #account-profile h2 {
 	margin-top: 0px;
+}
+.twitter-handle {
+	color: #555555;
 }
 
 /*placeholder image*/

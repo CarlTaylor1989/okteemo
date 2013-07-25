@@ -27,19 +27,19 @@
 					<?php foreach ($ranked_solo_league['entries']['array'] as $solo_league_key => $solo_league_value) {
 						$league_points = $solo_league_value['leaguePoints'];
 						$player = $solo_league_value['playerOrTeamName'];
-						$data_by_points[$player][$league_points] = $solo_league_value;
-						krsort($data_by_points[$player][$league_points]);
-					} ?>
+						$data_by_points[$player] = $solo_league_value;
+						$test[$player] = $data_by_points[$player][$league_points];
+						krsort($test);
+					} exit; ?>
 						<?php
-						print_r($data_by_points[$player][$league_points]); exit;
-						 foreach ($data_by_points as $l_key => $l_value) { ?>
-							<?php if($l_value['rank'] == $ranked_solo_league['requestorsRank']) { ?>
+						//foreach ($data_by_points[$player][$league_points] as $l_key => $l_value) { ?>
+							<?php //if($l_value['rank'] == $ranked_solo_league['requestorsRank']) { ?>
 							<tr>
-								<td><?php echo $l_value['playerOrTeamName']; ?></td>
-								<td><?php echo $l_value['leaguePoints']; ?></td>
+								<td><?php //echo $l_value['playerOrTeamName']; ?></td>
+								<td><?php //echo $l_value['leaguePoints']; ?></td>
 							</tr>
-							<?php } ?>
-					<?php } ?>
+							<?php //} ?>
+					<?php //} ?>
 					</table>
 					<h2>Last Game Played</h2>
 					<?php foreach($temp as $date => $value) { ?>

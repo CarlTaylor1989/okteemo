@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 10, 2013 at 02:12 PM
+-- Generation Time: Jul 25, 2013 at 04:28 PM
 -- Server version: 5.5.24-log
 -- PHP Version: 5.3.1
 
@@ -154,6 +154,7 @@ INSERT INTO `champions` (`id`, `name`, `title`, `lore`, `tags`) VALUES
 (154, 'Zac', 'the Secret Weapon', 'Zac is the product of a Zaun experiment to manufacture a hexchem-engineered supersoldier - the Zaun Amorphous Combatant. Combining brute strength with limitless flexibility, he is a versatile juggernaut: a creative fighter who bounces over obstacles and pounds his foes into submission. Though he was created inside a weapons laboratory, Zac was rescued and adopted by two loving parents who raised him to be a kind and friendly child. As the years passed, he grew up to be a fierce hero, sworn to protect the ordinary, everyday people of Zaun.Long ago, two Zaun scientists developed an organic substance that could withstand extreme conditions, spontaneously alter its biological structure, and generate tremendous amounts of kinetic force.  As the scientists, husband and wife, watched the prototype grow from a spoon-sized droplet to a small blob, they noticed that their creation would respond to their presence. It sprung forward when they called and bounced when they sang. The couple began to see more than an experiment; they saw a small child, filled with affection and joy.After testing the prototype one evening, the scientists placed the blob back in its cage. It slouched and shuddered in the corner, inconsolably sad.  At that moment, the couple realized that their beloved creation wished for a free life outside the lab. They were struck by their conscience and could not allow the prototype to be used as a weapon.  The husband and wife fled with the young blob, replacing its weapon designation - Zaun Amorphous Combatant - with a proper name: Zac. In a quiet neighborhood far from the cities of Zaun, the scientists raised Zac as their own child.Zac was always different from the other children. None had his powers of strength and flexibility, so the couple taught him to tell right from wrong and to use his gifts responsibly.  Thanks to the care and affection of his loving parents, Zac lived a peaceful, happy childhood.That childhood ended when the Zaun laboratory finally found Zac. Unable to replicate the formula used to create the amorphous prototype, the laboratory''s staff never stopped searching for the scientists and their experiment. When they tracked down the family, they threatened to tear it apart. The staff abducted Zac''s parents and demanded that the couple assist in his capture and return. Seized by the fear of losing his freedom and his parents, Zac unleashed every ounce of his raw energy and mass for the very first time. He subdued his parents'' captors, sent the laboratory''s workers fleeing, and brought his loved ones home. From then on, Zac vowed to defend all ordinary lives threatened by extraordinary treachery and wickedness. Originally built to destroy, he now protects the innocent and the helpless.''''Even if you don''t have a spine, you still have to stand up for yourself.'''' -- Zac', 'fighter,melee'),
 (238, 'Zed', 'the Master of Shadows', 'Zed is the first ninja in 200 years to unlock the ancient, forbidden ways. He defied his clan and master, casting off the balance and discipline that had shackled him all his life. Zed now offers power to those who embrace knowledge of the shadows, and slays those who cling to ignorance.An orphan, Zed was taken in and trained by a great ninja master. Only one other student appeared to be Zed''s equal - the master''s son, Shen. It seemed Zed could never win the favor of the master, as every match between the rivals ended in a draw. Frustrated and jealous, he sought an advantage. The young ninja ventured into a sealed part of the clan''s temple, where he found an ornate, foreboding box. Sensing the dark knowledge within, Zed knew he should not open it, but he peered inside nonetheless. In an instant, shadows touched his mind, revealing techniques that had long been hidden. Now armed with a secret edge, he challenged Shen, and this time he defeated the master''s son. He expected praise and recognition in his moment of victory, but somehow the master knew Zed had used forbidden ways, and banished him.Humiliated, the young ninja wandered for years. His bitterness turned to ambition, and he began to train others in the style of the shadows. As his power grew, so did his circle of followers, but he knew that without the box, his technique would never be perfect. One day, Zed looked at his followers and saw that his students were now an army. He led them back to the temple to claim his prize. At the gates, he was surprised to find the old master waiting, receiving Zed and his disciples as if they were welcome guests. The old man laid his sword at Zed''s feet, declaring that he had failed Zed as his master. By banishing his former student, the master had doomed Zed to the shadows, instead of leading him to the balanced path. The old man implored Zed to enter the temple, destroy the box, and lead his followers to balance. The dark ninja followed the master inside. Moments later, the assembled ninjas heard Zed cry out in pain. Mysteriously, he emerged unscathed, and threw the severed head of the master at Shen''s feet. Screaming in rage, Zed commanded his followers to slaughter the master''s students and seize the box.That day, the old ninja order fell. Though many students died, some escaped thanks to Shen''s heroic efforts. Now the temple is a dark training ground for the Order of the Shadow. Zed rules as the Order''s master, and his edict is simple: perfect one''s technique, and kill all ninjas who refuse to embrace the shadows.''''Balance is a lie - we are the true ninjas.''''-- Zed', 'assassin,melee'),
 (254, 'Vi', 'the Piltover Enforcer', 'To Vi, every problem is just another brick wall to punch through with her gigantic hextech gauntlets. Though she grew up on the wrong side of the law, Vi now uses her criminal know-how to serve Piltover''s police force. Vi''s brash attitude, abrasive humor, and blatant refusal to follow orders can often infuriate her by-the-books partner, Caitlyn. But even the sheriff of Piltover cannot deny that Vi is an invaluable asset in the fight against crime.As a child growing up in the lawless outskirts of Piltover, Vi learned to rob and cheat to get by. Stealing and stripping hextech hardware gave her the skills of a master mechanic, while life on the streets taught her self-reliance. When she was six, a ragtag group of criminals took a shine to the young delinquent and brought her into their fold. By the time Vi was eleven, she had become a seasoned accomplice, and she relished the thrill of every heist.Vi''s attitude changed when a raid on a mining facility went bad. She was forced to decide between fleeing with her crew and trying to save the innocent mine workers from a collapsed tunnel. Vi chose to play the hero. While searching for a way to free the mine workers from the rubble, she discovered a damaged robotic mining rig. Improvising, she wrenched off its huge fists and modified them into makeshift hextech gauntlets. Fitting the heavy weapons to her tiny hands, the young girl flexed her arm and threw a powered punch at the rubble. The force of the blow blasted away the rock. With the workers free to escape, Vi fled the scene.After that job gone wrong, Vi severed her connection to the crew. She returned to a life of solitary crime, but stole only from other criminals. As the years went by, Vi modified and improved her hextech fists, allowing her to bust up heists and snatch loot with ease. Eventually, word of her notoriety reached Caitlyn, the famed Sheriff of Piltover. Rather than seek Vi''s arrest, Caitlyn offered the criminal a way to pay her debt to society: work for the law in Piltover. Vi laughed. To her, a job that let her beat up crooks without forcing her to run from the cops sounded perfect. She immediately accepted. Caitlyn now struggles to keep Vi in line, and Vi treats Caitlyn''s orders as mere suggestions, but when they work together, they are feared by all lawbreakers in Piltover.''''It''s a shame. I''ve got two fists, but you''ve only got one face.''''-- Vi', 'fighter,melee'),
+(266, 'Aatrox', 'The Darkin Blade', '', ''),
 (267, 'Nami', 'the Tidecaller', 'Nami channels the primal energies of the ocean, harnessing its mystical restorative properties and commanding the raw power of the tides themselves. Though many doubted her, Nami had the bravery and determination to take on a dangerous quest when no one else would. Now her people believe she is the Tidecaller, a chosen one destined to complete a quest essential to the survival of her entire race.The Tidecaller''s sacred duty is to acquire a moonstone, a powerful object found only in the towering reaches of the surface world. Her people, the Marai, rely on the moonstone''s light to ward off the terrors of the depths. However, the stone''s power lasts only one hundred years. Before its light fades, the Tidecaller must journey into the Great Deep, retrieve an abyssal pearl, and carry it to the surface. There, on the night of the winter solstice of the hundredth year, the Tidecaller makes a ceremonial exchange with a landwalker bearing a moonstone. By trading the pearl for the moonstone, the Tidecaller ensures the survival of the Marai for another century.However, in Nami''s time, as the hundred years drew to a close, no Tidecaller had been found. Without a chosen one to complete the quest, her people would face disaster, but the Marai waited in faith that the Tidecaller would appear. Nami refused to sit idle, insisting that without a Tidecaller to save them, someone had to act. Bravely, she decided to begin the quest herself and ventured alone into the dangerous depths. None expected her to survive, but after six days of battles with untold horrors, Nami returned with the pearl in hand. The Marai hailed her as the new Tidecaller. All that remained was for Nami to journey to the surface and complete the exchange.When Nami arrived at the surface, however, she found only an empty shore. She waited for days in a mystic cove, unsure of what to do. In all the legends of the Tidecallers, the bearer of the moonstone had never failed to arrive. Nami faced a choice. She knew the surface world only through tale and rumor, but the survival of the Marai depended upon her. Summoning the tide to bear her ashore, Nami began her search for the moonstone and became the first of her kind to explore the world above the ocean. She left her home behind, and vowed not to return until she had completed the Tidecaller''s quest.''''I am the tide, and I cannot be turned.''''-- Nami', 'support,ranged'),
 (412, 'Thresh', 'the Chain Warden', 'Thresh is a twisted reaper whose hungry chains ensnare the souls of the living. A moment''s hesitation at the sight of his ghostly visage and there is no escape. He leaves in his wake hollow corpses, their souls ripped loose and trapped in the sickly green light of his lantern. The Chain Warden takes sadistic joy in tormenting his victims, both before and after their deaths. His grim task is never complete, and he stalks the land for ever more resolute spirits to unravel.Thresh carves careful, deliberate paths through Valoran. He handpicks his targets individually, devoting his full attention to each soul in turn. He isolates and toys with them, gradually eroding their sanity with his twisted, maddening humor. Once Thresh takes an interest in a soul, he does not relent until he possesses it. He then drags those he captures back to the Shadow Isles for an unimaginably dreadful fate. This is his only purpose.Little is known about the Chain Warden''s past, and many of the details live only in nursery rhymes and campfire tales. They tell of a sadistic jailer from centuries past who took great delight in torturing his wards. Patient and brutal, he used a variety of methods to break his victims'' minds before their bodies succumbed to his grisly designs. Chains were the jailer''s preferred instruments of terror. Their shrill scrape marked his dreadful approach and promised agony to those he visited. His dark reign went unchallenged until his prisoners escaped during a massive riot. They overwhelmed him, and without ceremony or remorse, hanged him from his own chains. Thus began the unlife of the horrible specter known as Thresh, or so the tales go.Thresh now haunts the land, leaving an aftermath of horror and despair. However, there is a devious purpose behind his dark machinations, and the meager spirits of average men are insufficient. He seeks stronger souls. Only when he has broken the wills of Valoran''s most resilient warriors will he finally have what he needs.''''There are few things as invigorating as taking a mind apart, piece by piece.''''-- Thresh', 'tank,ranged,support');
 
@@ -2024,6 +2025,30 @@ INSERT INTO `groups` (`id`, `name`, `description`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `guides`
+--
+
+CREATE TABLE IF NOT EXISTS `guides` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `champ_id` int(11) NOT NULL,
+  `author` varchar(255) NOT NULL,
+  `title` varchar(128) NOT NULL,
+  `sub_title` varchar(128) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `guides`
+--
+
+INSERT INTO `guides` (`id`, `champ_id`, `author`, `title`, `sub_title`) VALUES
+(1, 1, 'Carl', 'Annie the boomer', 'Good guide for beginners'),
+(2, 1, 'Carl', 'Annie Spannie', NULL),
+(3, 2, 'Carl', 'Another guide added', 'Testing sub title');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `items`
 --
 
@@ -2563,20 +2588,20 @@ CREATE TABLE IF NOT EXISTS `users` (
   `created_on` datetime NOT NULL,
   `last_login` datetime DEFAULT NULL,
   `active` tinyint(1) unsigned DEFAULT NULL,
-  `first_name` varchar(50) DEFAULT NULL,
-  `last_name` varchar(50) DEFAULT NULL,
-  `company` varchar(100) DEFAULT NULL,
-  `phone` varchar(20) DEFAULT NULL,
+  `name` varchar(50) DEFAULT NULL,
+  `twitter_handle` varchar(256) DEFAULT NULL,
   `profile_complete` tinyint(4) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`, `profile_complete`) VALUES
-(3, '\0\0', 'test', '51448e5df9fee0919a22323e0672434d5b0d9d7a', '92d3ecff7e', 'test@test.com', NULL, NULL, NULL, 'd099f384421cbbaa6483a7f2b7bf633620f3e9f2', '2013-06-07 10:31:19', '2013-06-07 10:56:49', 1, NULL, NULL, NULL, NULL, 4);
+INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `name`, `twitter_handle`, `profile_complete`) VALUES
+(3, '\0\0', 'test', '51448e5df9fee0919a22323e0672434d5b0d9d7a', '92d3ecff7e', 'test@test.com', NULL, NULL, NULL, 'd099f384421cbbaa6483a7f2b7bf633620f3e9f2', '2013-06-07 10:31:19', '2013-06-07 10:56:49', 1, NULL, NULL, 4),
+(4, '\0\0', 'testing22', 'c366f34a59554c0057b697b3c44f4d7afac3990b', '80155fd98d', 'test@tessst.com', NULL, NULL, NULL, NULL, '2013-06-20 10:49:48', '2013-06-20 10:49:48', 1, NULL, NULL, 1),
+(5, '\0\0', 'carltest', '3c7f126c8e56d717752a2a4eb5a817dbded986fd', 'ea0e3aef3b', 'tessst@tesst.com', NULL, NULL, NULL, NULL, '2013-07-25 14:10:15', '2013-07-25 14:10:15', 1, 'Carl', '@CarlTaylor1989', 2);
 
 -- --------------------------------------------------------
 
@@ -2592,14 +2617,16 @@ CREATE TABLE IF NOT EXISTS `users_groups` (
   UNIQUE KEY `uc_users_groups` (`user_id`,`group_id`),
   KEY `fk_users_groups_users1_idx` (`user_id`),
   KEY `fk_users_groups_groups1_idx` (`group_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `users_groups`
 --
 
 INSERT INTO `users_groups` (`id`, `user_id`, `group_id`) VALUES
-(3, 3, 2);
+(3, 3, 2),
+(4, 4, 2),
+(5, 5, 2);
 
 --
 -- Constraints for dumped tables

@@ -14,6 +14,31 @@ class Profile extends MY_Model {
         return $query->row()->profile_complete;
     }
 
+    public function update_profile_completion($update_progress = 4)
+    {
+        $id = $this->session->userdata('user_id');
+
+        $data = array(
+            'profile_complete'  => $update_progress
+        );
+
+        $this->db->where('id', $id);
+        $this->db->update('users', $data);
+    }
+
+    public function update_profile_stage_one($basic_name, $twitter_handle)
+    {
+        $id = $this->session->userdata('user_id');
+
+        $data = array(
+            'name'              => $basic_name,
+            'twitter_handle'    => '@'.$twitter_handle
+        );
+
+        $this->db->where('id', $id);
+        $this->db->update('users', $data);
+    }
+
     public function username()
     {
         $id = $this->session->userdata('user_id');

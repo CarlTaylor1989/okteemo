@@ -16,7 +16,8 @@ class Account extends MY_Controller {
     	}
 
     	$this->load->model('profile');
-    	$this->load->model('api');
+        $this->load->library('form_validation');
+
     	$this->data = array(
     		'title' 			=> 'Edit your profile',
     		'body'				=> 'account-profile',
@@ -25,49 +26,43 @@ class Account extends MY_Controller {
     		'stage_view'		=> 'account/profile_complete/stage_'.$this->profile->check_profile_complete(),
     	);
 
-    	if($stage_view == 1)
+    	if($this->uri->segment(3) != $this->data['profile_complete'])
     	{
-    		$this->view = 'account/profile_complete/stage_1';
+            redirect('/account/edit-profile/'.$this->data['profile_complete'], 'refresh');
     	}
-    	else if($stage_view == 2)
-    	{
-    		$this->view = 'account/profile_complete/stage_2';
-    	}
-    	else if($stage_view == 3)
-    	{
-    		$this->view = 'account/profile_complete/stage_3';
-    	}
-    	else if($stage_view == 4)
+
+        if($_SERVER['REQUEST_METHOD'] === 'POST')
+        {
+            $this->form_validation->set_rules('basic_name', 'Name', 'trim|required');
+            $this->form_validation->set_rules('twitter_handle', 'Twitter Handle', 'trim|required');
+
+            $postdata = array(
+                'basic_name'      => $this->input->post('basic_name'),
+                'twitter_handle'  => $this->input->post('twitter_handle'),
+            );
+
+            if($this->form_validation->run() == FALSE)
+            {
+                $this->data['postdata'] = $postdata;
+            }
+            else
+            {
+                $this->data['profile_complete']++;
+                $progress = $this->data['profile_complete'];
+
+                $this->profile->update_profile_stage_one($postdata['basic_name'], $postdata['twitter_handle']);
+                $this->profile->update_profile_completion($progress);
+
+                redirect('/account/edit-profile/'.$progress);
+            }
+        }
+
+    	if($stage_view == 4)
     	{
     		$stage_view = $this->profile->username();
     	}
 
-    	if($this->uri->segment(3) != $stage_view)
-    	{
-    		redirect('/account/edit-profile/'.$stage_view, 'refresh');
-    	}
-	}
-
-	public function api_test()
-	{	
-		$url = array('url' => base_url());
-		$this->load->library('Quickfind_request', $url);
-
-		$player = new Quickfind_player('euw', 'irazorx', array('array'=>true, 'contact'=>'CarlTaylor1989'));
-
-		$info = $player->info();
-
-		// $this->load->model('api');
-		$this->data = array(
-    		'title' 			=> 'Edit your profile',
-    		'body'				=> 'account-profile',
-    		'summoner_name'		=> $info['name'],
-    		'summoner_level'	=> $info['level'],
-    		'summoner_platform'	=> 'Europe West'
-
-    		//'summoner_name'	=> $this->api->summoner_name(),
-    		//'icon_id'			=> $this->api->icon_id()
-    	);
+    	$this->view = $this->data['stage_view'];
 	}
 
 	public function login()
