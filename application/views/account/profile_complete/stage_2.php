@@ -22,9 +22,21 @@
 			<div class="span9">
 				<form class="form-horizontal">
 					<div class="control-group">
-						<label class="control-label" for="basic_name">Name</label>
+					    <label class="control-label" for="looking_to_do">What are you looking to do?</label>
 					    <div class="controls">
-					     	<input type="text" id="basic_name" name="basic_name" placeholder="Name">
+					    	<textarea id="looking_to_do" name="looking_to_do" placeholder="What are you looking to do?"></textarea>
+					    </div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="roles">Roles</label>
+					    <div class="controls">
+					     	<div class="btn-group" data-toggle="buttons-checkbox">
+								<button type="button" class="btn btn-primary">Top</button>
+							  	<button type="button" class="btn btn-primary">Mid</button>
+							  	<button type="button" class="btn btn-primary">Bot</button>
+							  	<button type="button" class="btn btn-primary">Support</button>
+							  	<button type="button" class="btn btn-primary">Jungler</button>
+							</div>
 					    </div>
 					</div>
 					<div class="control-group">

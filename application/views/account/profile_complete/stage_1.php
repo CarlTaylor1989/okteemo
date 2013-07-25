@@ -21,7 +21,7 @@
 			</div>
 			<div class="span9">
 				<?php echo validation_errors('<div class="error">', '</div>'); ?>
-				<form method="post" class="form-horizontal" id="stage_1" action="/account/edit-profile/1">
+				<form method="post" class="form-horizontal" id="stage_1" action="<?php echo base_url(); ?>account/edit-profile/1">
 					<input type="hidden" value="1" name="stage_1">
 					<div class="control-group">
 						<label class="control-label" for="basic_name">Name</label>
