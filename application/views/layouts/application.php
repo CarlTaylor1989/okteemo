@@ -24,6 +24,18 @@
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/default.css" />
 <script src="<?php echo base_url(); ?>assets/js/jquery-1.10.0.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/highcharts.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#roles_group .btn").click(function() {
+    	var role_class = $(this).attr('data-role');
+    	if($('.'+role_class).val() == 0) {
+    		$("."+role_class).val('1');
+    	} else if($('.'+role_class).val() == 1) {
+    		$("."+role_class).val('0');
+    	}
+	});
+}); 
+</script>
 </head>
 
 <body id="<?php echo $body; ?>">

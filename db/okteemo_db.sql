@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 25, 2013 at 04:28 PM
+-- Generation Time: Jul 26, 2013 at 04:33 PM
 -- Server version: 5.5.24-log
 -- PHP Version: 5.3.1
 
@@ -2601,7 +2601,26 @@ CREATE TABLE IF NOT EXISTS `users` (
 INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `name`, `twitter_handle`, `profile_complete`) VALUES
 (3, '\0\0', 'test', '51448e5df9fee0919a22323e0672434d5b0d9d7a', '92d3ecff7e', 'test@test.com', NULL, NULL, NULL, 'd099f384421cbbaa6483a7f2b7bf633620f3e9f2', '2013-06-07 10:31:19', '2013-06-07 10:56:49', 1, NULL, NULL, 4),
 (4, '\0\0', 'testing22', 'c366f34a59554c0057b697b3c44f4d7afac3990b', '80155fd98d', 'test@tessst.com', NULL, NULL, NULL, NULL, '2013-06-20 10:49:48', '2013-06-20 10:49:48', 1, NULL, NULL, 1),
-(5, '\0\0', 'carltest', '3c7f126c8e56d717752a2a4eb5a817dbded986fd', 'ea0e3aef3b', 'tessst@tesst.com', NULL, NULL, NULL, NULL, '2013-07-25 14:10:15', '2013-07-25 14:10:15', 1, 'Carl', '@CarlTaylor1989', 2);
+(5, '\0\0', 'carltest', '3c7f126c8e56d717752a2a4eb5a817dbded986fd', 'ea0e3aef3b', 'tessst@tesst.com', NULL, NULL, NULL, 'c46ac9adeb322cd9ab7745ef30aec0989239c2ea', '2013-07-25 14:10:15', '2013-07-26 15:26:38', 1, 'Carl', '@CarlTaylor1989', 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users_game_info`
+--
+
+CREATE TABLE IF NOT EXISTS `users_game_info` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `looking_to_do` varchar(256) NOT NULL,
+  `role_top` tinyint(4) NOT NULL,
+  `role_mid` tinyint(4) NOT NULL,
+  `role_adc` tinyint(4) NOT NULL,
+  `role_sup` tinyint(4) NOT NULL,
+  `role_jun` tinyint(4) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 

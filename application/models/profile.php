@@ -39,6 +39,24 @@ class Profile extends MY_Model {
         $this->db->update('users', $data);
     }
 
+    public function update_profile_stage_two($looking_to_do, $role_top, $role_mid, $role_adc, $role_sup, $role_jun)
+    {
+        $id = $this->session->userdata('user_id');
+
+        $data = array(
+            'user_id'           => $id,
+            'looking_to_do'     => $looking_to_do,
+            'role_top'          => $role_top,
+            'role_mid'          => $role_mid,
+            'role_adc'          => $role_adc,
+            'role_sup'          => $role_sup,
+            'role_jun'          => $role_jun
+        );
+
+        $this->db->where('id', $id);
+        $this->db->update('users_game_info', $data);
+    }
+
     public function username()
     {
         $id = $this->session->userdata('user_id');
