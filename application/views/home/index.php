@@ -1,49 +1,56 @@
 <div class="bg">
 	<div class="container content">
 		<div class="row">
-			<div class="span8">
+			<div class="col-lg-8">
 				<div class="well intro-space">
 					<div class="load-fade">
 						<h2>Find your teams here at OkTeemo.</h2>
 					</div>
 				</div>
 			</div>
-			<div class="pull-right span4">
+			<div class="pull-right col-lg-4">
 				<!-- Step 1 -->
-				<div class="well">
+				<div class="panel reg_up">
 					<h3>Register for free now!</h3>
 					<div class="form_errors">
 						<?php echo validation_errors(); ?>
 					</div>
-					<?php echo form_open('/', $form_id); ?>
+					<?php echo form_open('/', $form_attr); ?>
 						<input name="register_form" type="hidden" value="true" />
 						<div class="control-group">
-							<label class="control-label" for="reg_username">Username</label>
-							<div class="controls">
-						    	<div class="input-prepend">
-						      		<span class="add-on"><i class="icon-user"></i></span>
-						      		<input class="span3" id="reg_username" name="reg_username" type="text" placeholder="Username" value="<?php echo set_value('reg_username'); ?>" />
-						    	</div>
+							<div class="form-group">
+				      			<label for="reg_username">Username</label>
+				      			<div class="input-group">
+					      			<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+					      			<input class="form-control" id="reg_username" name="reg_username" type="text" placeholder="Username" value="<?php echo set_value('reg_username'); ?>" />
+				      			</div>
 						  	</div>
+						  	<div class="form-group">
+								<label for="reg_email">Email</label>
+								<div class="input-group">
+									<span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+  									<input type="text" class="form-control" id="reg_email" name="reg_email" type="text" placeholder="Email address" value="<?php echo set_value('reg_email'); ?>">
+									</div>
+  							</div>
 							<label class="control-label" for="reg_email">Email address</label>
 							<div class="controls">
 						    	<div class="input-prepend">
 						      		<span class="add-on"><i class="icon-envelope"></i></span>
-						      		<input class="span3" id="reg_email" name="reg_email" type="text" placeholder="Email address" value="<?php echo set_value('reg_email'); ?>" />
+						      		<input class="col-lg-3" id="reg_email" name="reg_email" type="text" placeholder="Email address" value="<?php echo set_value('reg_email'); ?>" />
 						    	</div>
 						  	</div>
 						  	<label class="control-label" for="reg_password">Password</label>
 							<div class="controls">
 						    	<div class="input-prepend">
 						      		<span class="add-on"><i class="icon-lock"></i></span>
-						      		<input class="span3" id="reg_password" name="reg_password" type="password" placeholder="Password" />
+						      		<input class="col-lg-3" id="reg_password" name="reg_password" type="password" placeholder="Password" />
 						    	</div>
 						  	</div>
 						  	<label class="control-label" for="reg_conf_password">Confirm Password</label>
 							<div class="controls">
 						    	<div class="input-prepend">
 						      		<span class="add-on"><i class="icon-lock"></i></span>
-						      		<input class="span3" id="reg_conf_password" name="reg_conf_password" type="password" placeholder="Confirm Password" />
+						      		<input class="col-lg-3" id="reg_conf_password" name="reg_conf_password" type="password" placeholder="Confirm Password" />
 						    	</div>
 						  	</div>
 						  	<div class="center">
@@ -59,8 +66,8 @@
 	</div>
 </div>
 <div class="container">
-	<div class="row col-3">
-		<div class="span4">
+	<div class="row">
+		<div class="col-lg-4">
 			<div class="looking-team">
 				<h4>I'm looking for a<br /><span>TEAM</span></h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -69,7 +76,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="span4">
+		<div class="col-lg-4">
 			<div class="looking-team">
 				<h4>I'm looking for a<br /><span>TEAM</span></h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -78,7 +85,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="span4">
+		<div class="col-lg-4">
 			<div class="looking-team">
 				<h4>I'm looking for a<br /><span>TEAM</span></h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -89,12 +96,12 @@
 		</div>
 	</div>
 	<div class="row feedback-feature">
-		<div class="span12">
+		<div class="col-lg-12">
 			<h2>Hear what our members have to say!</h2>
 		</div>
 	</div>
 	<div class="row">
-		<div class="span12">
+		<div class="col-lg-12">
 			<div id="myCarousel" class="carousel slide">
 			  <ol class="carousel-indicators">
 			    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -104,43 +111,43 @@
 			  <!-- Carousel items -->
 			  <div class="carousel-inner">
 			    <div class="active item">
-			    	<div class="span4 no-marg">
+			    	<div class="col-lg-4 no-marg">
 			    		<p class="feedback-comment">"Found a 5v5 within 20 minutes and managed to achieve platinum! Thank you Okteemo."</p>
 			    		<p class="feedback-author">CarlTaylor1989 - EUW</p>
 			    	</div>
-			    	<div class="span4">
+			    	<div class="col-lg-4">
 			    		<p class="feedback-comment">"Found a 5v5 within 20 minutes and managed to achieve platinum! Thank you Okteemo."</p>
 			    		<p class="feedback-author">IRazorX - US</p>
 			    	</div>
-			    	<div class="span4">
+			    	<div class="col-lg-4">
 			    		<p class="feedback-comment">"Found a 5v5 within 20 minutes and managed to achieve platinum! Thank you Okteemo."</p>
 			    		<p class="feedback-author">Touch_Me - EUW</p>
 			    	</div>
 			    </div>
 			    <div class="item">
-			    	<div class="span4 no-marg">
+			    	<div class="col-lg-4 no-marg">
 			    		<p class="feedback-comment">"Found a 5v5 within 20 minutes and managed to achieve platinum! Thank you Okteemo."</p>
 			    		<p class="feedback-author">CarlTaylor1989 - EUW</p>
 			    	</div>
-			    	<div class="span4">
+			    	<div class="col-lg-4">
 			    		<p class="feedback-comment">"I love it up the chuff"</p>
 			    		<p class="feedback-author">IRazorX - US</p>
 			    	</div>
-			    	<div class="span4">
+			    	<div class="col-lg-4">
 			    		<p class="feedback-comment">"Found a 5v5 within 20 minutes and managed to achieve platinum! Thank you Okteemo."</p>
 			    		<p class="feedback-author">Touch_Me - EUW</p>
 			    	</div>
 			    </div>
 			    <div class="item">
-			    	<div class="span4 no-marg">
+			    	<div class="col-lg-4 no-marg">
 			    		<p class="feedback-comment">"Found a 5v5 within 20 minutes and managed to achieve platinum! Thank you Okteemo."</p>
 			    		<p class="feedback-author">CarlTaylor1989 - EUW</p>
 			    	</div>
-			    	<div class="span4">
+			    	<div class="col-lg-4">
 			    		<p class="feedback-comment">"Found a 5v5 within 20 minutes and managed to achieve platinum! Thank you Okteemo."</p>
 			    		<p class="feedback-author">IRazorX - US</p>
 			    	</div>
-			    	<div class="span4">
+			    	<div class="col-lg-4">
 			    		<p class="feedback-comment">"Found a 5v5 within 20 minutes and managed to achieve platinum! Thank you Okteemo."</p>
 			    		<p class="feedback-author">Touch_Me - EUW</p>
 			    	</div>

@@ -17,6 +17,7 @@
 <link rel="shortcut icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap.css" />
+<link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap-glyphicons.css" />
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/bootstrap.icon-large.min.css">
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/validationEngine.jquery.css" />
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/datepicker.css" />
@@ -43,7 +44,7 @@ $(document).ready(function(){
 <div id="container">
 	<div class="container">
 		<div class="row">
-			<header class="span12">
+			<header class="col-lg-12">
 				<?php $this->load->view('assets/_navigation'); ?>
 			</header>
 		</div>
@@ -53,7 +54,7 @@ $(document).ready(function(){
 	</div>
 	<div id="footer" class="container">
 		<div class="row">
-			<div class="span12">
+			<div class="col-lg-12">
 				<ul>
 					<li><a href="">Home</a></li>
 					<li><a href="">Find a team</a></li>

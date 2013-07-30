@@ -153,10 +153,14 @@ h3#myModalLabel {
 	color:#3b3b3b;
 	margin-bottom:0;
 }
-.well input[type="text"], .well input[type="password"] {
-	width: 210px;
+.reg_up h3 {
+	text-align: center;
+	color:#3b3b3b;
 }
-
+.reg_up {
+	color: #999;
+	zoom:1;
+}
 .reg_form .well {
 	padding-bottom: 0px;
 }
@@ -169,7 +173,6 @@ h3#myModalLabel {
 .reg_form .well .control-group input[type="submit"] {
 	width: 100%;
 }
-
 .reg_form input, .reg_select select {
 	width: 220px;
 }
@@ -247,7 +250,6 @@ h3#myModalLabel {
 /* FOOTER CSS */
 #footer {
 	background: url(../img/footer-bar.png) top left repeat-x;
-	width: 940px;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	padding-top: 20px;

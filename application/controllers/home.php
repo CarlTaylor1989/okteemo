@@ -8,8 +8,9 @@ class Home extends MY_Controller {
 		$this->load->library('form_validation');
 		$this->load->model('registration');
 
-		$this->data['form_id'] = array(
-			'id' => 'home_reg_form'
+		$this->data['form_attr'] = array(
+			'id' => 'home_reg_form',
+			'class' => 'form-horizontal'
 		);
 		$this->data['title'] = 'Home';
 		$this->data['body']	= 'home';
