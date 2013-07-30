@@ -11,54 +11,45 @@
 			<div class="pull-right col-lg-4">
 				<!-- Step 1 -->
 				<div class="panel reg_up">
-					<h3>Register for free now!</h3>
+					<h3>REGISTER FOR FREE NOW!</h3>
 					<div class="form_errors">
 						<?php echo validation_errors(); ?>
 					</div>
 					<?php echo form_open('/', $form_attr); ?>
 						<input name="register_form" type="hidden" value="true" />
-						<div class="control-group">
-							<div class="form-group">
-				      			<label for="reg_username">Username</label>
-				      			<div class="input-group">
-					      			<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-					      			<input class="form-control" id="reg_username" name="reg_username" type="text" placeholder="Username" value="<?php echo set_value('reg_username'); ?>" />
-				      			</div>
-						  	</div>
-						  	<div class="form-group">
-								<label for="reg_email">Email</label>
-								<div class="input-group">
-									<span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
-  									<input type="text" class="form-control" id="reg_email" name="reg_email" type="text" placeholder="Email address" value="<?php echo set_value('reg_email'); ?>">
-									</div>
-  							</div>
-							<label class="control-label" for="reg_email">Email address</label>
-							<div class="controls">
-						    	<div class="input-prepend">
-						      		<span class="add-on"><i class="icon-envelope"></i></span>
-						      		<input class="col-lg-3" id="reg_email" name="reg_email" type="text" placeholder="Email address" value="<?php echo set_value('reg_email'); ?>" />
-						    	</div>
-						  	</div>
-						  	<label class="control-label" for="reg_password">Password</label>
-							<div class="controls">
-						    	<div class="input-prepend">
-						      		<span class="add-on"><i class="icon-lock"></i></span>
-						      		<input class="col-lg-3" id="reg_password" name="reg_password" type="password" placeholder="Password" />
-						    	</div>
-						  	</div>
-						  	<label class="control-label" for="reg_conf_password">Confirm Password</label>
-							<div class="controls">
-						    	<div class="input-prepend">
-						      		<span class="add-on"><i class="icon-lock"></i></span>
-						      		<input class="col-lg-3" id="reg_conf_password" name="reg_conf_password" type="password" placeholder="Confirm Password" />
-						    	</div>
-						  	</div>
-						  	<div class="center">
-						  		<button class="btn btn-large btn-primary">Go! <i class="icon-arrow-right icon-white"></i></a>
-						  	</div>
+						<div class="form-group">
+			      			<label for="reg_username">Username</label>
+			      			<div class="input-group">
+				      			<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+				      			<input class="form-control" id="reg_username" name="reg_username" type="text" placeholder="Username" value="<?php echo set_value('reg_username'); ?>" />
+			      			</div>
+					  	</div>
+					  	<div class="form-group">
+							<label for="reg_email">Email</label>
+							<div class="input-group">
+								<span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+								<input type="text" class="form-control" id="reg_email" name="reg_email" type="text" placeholder="Email address" value="<?php echo set_value('reg_email'); ?>">
+							</div>
 						</div>
+						<div class="form-group">
+							<label for="reg_password">Password</label>
+							<div class="input-group">
+								<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+								<input type="text" class="form-control" id="reg_password" name="reg_password" type="password" placeholder="Password" value="<?php echo set_value('reg_password'); ?>">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="reg_conf_password">Confirm Password</label>
+							<div class="input-group">
+								<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+								<input type="text" class="form-control" id="reg_conf_password" name="reg_password" type="password" placeholder="Confirm Password" value="<?php echo set_value('reg_conf_password'); ?>">
+							</div>
+						</div>
+					  	<div class="center">
+					  		<button class="btn btn-large btn-primary">Let's go! <i class="icon-arrow-right icon-white"></i></a>
+					  	</div>
+					</form>
 				</div>
-				</form>
 				<div class="clear"></div>
 			</div>
 			<div class="clear"></div>

@@ -1,3 +1,20 @@
+@font-face {
+  font-family: 'OkTeemoRegular';
+  src: url('../fonts/PT DIN Condensed Cyrillic.eot');
+  src: local('☺'), 
+       url('../fonts/PT DIN Condensed Cyrillic.woff') format('woff'), 
+       url('../fonts/PT DIN Condensed Cyrillic.ttf') format('truetype'), 
+       url('../fonts/PT DIN Condensed Cyrillic.svg#webfontg8dbVmxj') format('svg');
+}
+@font-face {
+  font-family: 'OkTeemoItalic';
+  src: url('../fonts/Museo_Slab_500italic-webfont.eot');
+  src: local('☺'), 
+       url('../fonts/Museo_Slab_500italic-webfont.woff') format('woff'), 
+       url('../fonts/Museo_Slab_500italic-webfont.ttf') format('truetype'), 
+       url('../fonts/Museo_Slab_500italic-webfont.svg#webfontg8dbVmxj') format('svg');
+}
+
 body {
 	background-color: #1E1E1E;
 	color: #D9D9D9;
@@ -110,6 +127,10 @@ ul.sign-in input[type="submit"] {
 .form_errors {
 	color: red;
 }
+.reg_up .form-group {
+	margin-right: 0px;
+	margin-left: 0px;
+}
 h3#myModalLabel {
 	color: #1E1E1E;
 }
@@ -154,6 +175,8 @@ h3#myModalLabel {
 	margin-bottom:0;
 }
 .reg_up h3 {
+	font-family: 'OkTeemoRegular';
+	font-size: 36px;
 	text-align: center;
 	color:#3b3b3b;
 }
