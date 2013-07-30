@@ -11,7 +11,7 @@
 			</div>
 			<div class="span9">
 				<div id="progress_tip" class="progress progress-striped progress-success active" data-toggle="tooltip" title="Complete the step process to complete your profile!">
-					<div class="bar" style="width: 99%"></div>
+					<div class="bar" style="width: 100%"></div>
 				</div>
 			</div>
 		</div>

@@ -37,6 +37,12 @@ class Profile extends MY_Model {
 
         $this->db->where('id', $id);
         $this->db->update('users', $data);
+
+        $data = array(
+            'user_id' => $id
+        );
+
+        $this->db->insert('users_game_info', $data);
     }
 
     public function update_profile_stage_two($looking_to_do, $role_top, $role_mid, $role_adc, $role_sup, $role_jun)
@@ -53,8 +59,7 @@ class Profile extends MY_Model {
             'role_jun'          => $role_jun
         );
 
-        $this->db->where('id', $id);
-        $this->db->update('users_game_info', $data);
+        $this->db->insert('users_game_info', $data);
     }
 
     public function username()
