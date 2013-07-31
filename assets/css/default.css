@@ -176,9 +176,16 @@ h3#myModalLabel {
 }
 .reg_up h3 {
 	font-family: 'OkTeemoRegular';
-	font-size: 36px;
+	font-size: 38px;
 	text-align: center;
 	color:#3b3b3b;
+	margin-top: 0px;
+}
+.reg_up label {
+	font-weight: normal;
+	font-family: 'OkTeemoRegular';
+	font-size: 18px;
+	letter-spacing: 1px;
 }
 .reg_up {
 	color: #999;
@@ -237,9 +244,6 @@ h3#myModalLabel {
 }
 .nav li {
 	line-height: 25px;
-}
-.navbar .nav .dropdown-toggle .caret {
-	margin-top: 12px;
 }
 .navbar .nav > li > a {
 	color: #999999;

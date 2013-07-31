@@ -20,6 +20,18 @@
 			<li><a href="#">Tournaments</a></li>
 			<li><a href="#">Etc</a></li>
 		</ul></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Contact</a></li>
+	</ul>
+	<ul class="nav pull-right">
+    	<li class="dropdown">
+        	<a class="dropdown-toggle" href="#" data-toggle="dropdown">Welcome, <strong><?php echo $this->session->userdata('username'); ?></strong>! <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+				<li><a href="#">My account</a></li>
+				<li><a href="<?php echo base_url(); ?>account/edit-profile">Edit my profile</a></li>
+				<li><a href="#logoutModal" data-toggle="modal">Log out</a></li>
+			</ul>
+    	</li>
 	</ul>
 </div>
 
