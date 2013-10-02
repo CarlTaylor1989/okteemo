@@ -35,14 +35,14 @@
 							<label for="reg_password">Password</label>
 							<div class="input-group">
 								<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-								<input type="text" class="form-control" id="reg_password" name="reg_password" type="password" placeholder="Password" value="<?php echo set_value('reg_password'); ?>">
+								<input type="password" class="form-control" id="reg_password" name="reg_password" type="password" placeholder="Password" value="<?php echo set_value('reg_password'); ?>">
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="reg_conf_password">Confirm Password</label>
 							<div class="input-group">
 								<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-								<input type="text" class="form-control" id="reg_conf_password" name="reg_password" type="password" placeholder="Confirm Password" value="<?php echo set_value('reg_conf_password'); ?>">
+								<input type="password" class="form-control" id="reg_conf_password" name="reg_conf_password" type="password" placeholder="Confirm Password" value="<?php echo set_value('reg_conf_password'); ?>">
 							</div>
 						</div>
 					  	<div class="center">

@@ -41,14 +41,11 @@ $(document).ready(function(){
 
 <body id="<?php echo $body; ?>">
 
+<header class="navbar navbar-fixed-top">
+	<?php $this->load->view('assets/_navigation'); ?>
+</header>
+
 <div id="container">
-	<div class="container">
-		<div class="row">
-			<header class="col-lg-12">
-				<?php $this->load->view('assets/_navigation'); ?>
-			</header>
-		</div>
-	</div>
 	<div id="main">
 		<?php echo $yield; ?>
 	</div>
